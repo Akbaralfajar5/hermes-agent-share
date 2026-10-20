@@ -15,6 +15,9 @@ Tidak ada data pribadi, kredensial, database session, atau project pribadi di re
 
 ## Cara pakai
 
+> Panduan langkah-demi-langkah untuk VPS baru: **[INSTALL-VPS.md](INSTALL-VPS.md)**
+
+
 1. **Install Hermes Agent** (official):
    ```bash
    git clone https://github.com/NousResearch/hermes-agent.git ~/.hermes/hermes-agent
