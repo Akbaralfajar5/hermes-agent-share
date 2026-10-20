@@ -78,12 +78,12 @@ diff /tmp/skill_update/skills/m9.md \
 | `skills/hermes/scripts/*.py` | `~/.hermes/skills/trading/hermes-crypto-agent/scripts/` |
 | `skills/hermes/DISPATCH.md` | `~/.hermes/skills/trading/hermes-crypto-agent/references/DISPATCH.md` |
 | `skills/m7.md`, `skills/m9.md` | `~/.hermes/skills/autonomous-ai-agents/hermes-core/scripts/` |
-| `SOUL.md` | `~/.hermes/skills/autonomous-ai-agents/hermes-core/scripts/SOUL_v3.md` |
+| `SOUL.md` | `~/.hermes/SOUL.md` (root — **bukan** di skills!) |
 | `panduan.md` | `~/.hermes/skills/autonomous-ai-agents/hermes-core/scripts/panduan_operator_v3.md` |
 
 ### Notes
 
 - Always `diff` before copying — don't blindly overwrite if the existing version has local patches
 - DISPATCH.md goes into `references/` not root of skill dir
-- SOUL.md and panduan.md are versioned (append `_v3`, `_v31`, etc.) to preserve history
+- `panduan.md` is versioned (append `_v3`, `_v31`, etc.) to preserve history; `SOUL.md` stays at `~/.hermes/SOUL.md` — never inside `skills/`
 - After update, verify with `ls` on both references/ and scripts/ directories

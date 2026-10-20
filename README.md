@@ -32,6 +32,10 @@ Tidak ada data pribadi, kredensial, database session, atau project pribadi di re
    cp -r skills/* ~/.hermes/skills/
    ```
 
+   > **Penting:** `SOUL.md` dan `IDENTITY.md` ditaruh di **root** `~/.hermes/`,
+   > **bukan** di `~/.hermes/skills/`. Hermes membaca persona dari
+   > `~/.hermes/SOUL.md`.
+
 3. **Isi environment:**
    ```bash
    cp .env.example ~/.hermes/.env

@@ -102,6 +102,10 @@ mkdir -p ~/.hermes/skills
 cp -r /tmp/hermes-share/skills/* ~/.hermes/skills/
 ```
 
+> **Penting:** `SOUL.md` dan `IDENTITY.md` ada di **root** `~/.hermes/`, bukan
+> di `~/.hermes/skills/`. Jangan dipindah ke folder skills — Hermes membaca
+> persona dari `~/.hermes/SOUL.md`.
+
 ---
 
 ## 4. Isi environment (.env)

@@ -155,6 +155,6 @@ Load by phase — don't load all at once:
 - `references/reporting.md` — Report structure, CVSS scoring, dedup, triage
 - `references/tooling.md` — Standard tools + authorized usage
 - `references/bounty-hunting-workflow.md` — Target selection strategy, parallel audit dispatch, source acquisition, Immunefi program extraction
-- `references/identity.md` — SUPERAGENT persona, character modes, severity rating
-- `references/soul.md` — Security research principles, impact bar, and evidence discipline
+- `references/identity-template.md` — SUPERAGENT persona template, character modes, severity rating
+- `references/soul-template.md` — Security research principles template, impact bar, and evidence discipline
 - `references/user.md` — Operator profile, hunting priorities, and trigger phrases

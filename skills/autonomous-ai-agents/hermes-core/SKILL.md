@@ -91,6 +91,6 @@ When user sends a `.zip` with skill updates, follow the routing table in `refere
 - `scripts/x2.md` — Strategy/architecture
 - `scripts/x3.md` — Debug/fault diagnosis
 - `references/AGENTS.md` — Core brain & router rules
-- `references/IDENTITY.md` — Name, vibe, character
-- `references/SOUL.md` — Persona, tone, flexibility doctrine
+- `references/identity-template.md` — Name, vibe, character (template)
+- `references/soul-template.md` — Persona, tone, flexibility doctrine (template)
 - `references/TOOLS.md` — Tool awareness & default stack
