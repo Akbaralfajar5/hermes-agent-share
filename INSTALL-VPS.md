@@ -188,3 +188,78 @@ Catatan: `hermes update` menimpa source Hermes, tapi **tidak** menyentuh
 ├── config.yaml      # config Hermes
 └── skills/          # koleksi skill dari share pack
 ```
+
+---
+
+## Uninstall Hermes (sebelum pasang yang ini)
+
+Kalau di VPS teman sudah ada Hermes versi lain dan mau dibersihkan dulu,
+jalankan **dari shell SSH** — bukan dari dalam chat agent, karena gateway
+tidak bisa meng-uninstall dirinya sendiri.
+
+### Lihat dulu apa yang akan dihapus
+
+```bash
+hermes uninstall --full --dry-run
+```
+
+### Uninstall total (kode + config + data)
+
+```bash
+hermes gateway stop
+hermes gateway uninstall
+hermes uninstall --full --yes
+```
+
+`--full` menghapus kode, isi `~/.hermes` (config, skills, memory, session),
+service systemd, dan binary `hermes`.
+
+### Uninstall kode saja, data disimpan
+
+```bash
+hermes uninstall --yes
+```
+
+Config, skills, `.env`, dan memory tetap ada — install ulang kode Hermes nanti
+dan data lama otomatis kepakai.
+
+### Hapus data saja (reset bersih, kode tetap)
+
+```bash
+hermes uninstall --data --yes
+```
+
+### Kalau perintah `hermes` sudah rusak / tidak ada (manual)
+
+```bash
+# 1. Matikan & hapus service
+systemctl --user disable --now hermes-gateway 2>/dev/null
+rm -f ~/.config/systemd/user/hermes-gateway.service
+systemctl --user daemon-reload
+
+# 2. Hapus binary
+rm -f ~/.local/bin/hermes
+
+# 3. Amankan data lama dengan rename (bisa dikembalikan)
+mv ~/.hermes ~/.hermes.old
+
+# 4. Opsional: cache browser
+mv ~/.cache/ms-playwright ~/.cache/ms-playwright.old
+```
+
+Kalau Hermes di-install lewat pip system-wide (bukan venv):
+
+```bash
+python3 -m pip uninstall -y hermes-agent
+```
+
+### Verifikasi sudah bersih
+
+```bash
+which hermes          # harus kosong
+ls ~/.hermes          # harus "No such file or directory"
+hermes --version      # command not found
+```
+
+Setelah bersih → lanjut lagi dari **langkah 1** panduan di atas.
+
