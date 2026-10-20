@@ -1,0 +1,18 @@
+# Minimal example — Hermes generates its own config on install.
+# Put this content in ~/.hermes/config.yaml or use `hermes config set`.
+model:
+  provider: anthropic          # or openai / openrouter / custom
+  default: claude-sonnet-4-20250514
+  base_url: ""
+  api_key: ${ANTHROPIC_API_KEY}
+
+agent:
+  max_turns: 120
+  gateway_notify_interval: 0
+
+web:
+  backend: auto
+browser:
+  engine: chromium
+
+# Providers / keys live in ~/.hermes/.env — never inline real keys here.

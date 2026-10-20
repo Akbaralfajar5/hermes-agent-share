@@ -1,0 +1,3220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="description" content="Complete technical chart analysis framework — Supply &amp; Demand, Market Structure, Liquidity, Inducement, Smart Money Concept, Elliot Wave, Fibonacci, Trading Psychology. Use when analyzing price charts, identifying trade setups, or providing trading analysis." />
+  <title>Chart Analysis &amp; Trading Framework</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Chart Analysis &amp; Trading Framework</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#chart-analysis-trading-framework-complete-document"
+id="toc-chart-analysis-trading-framework-complete-document">Chart
+Analysis &amp; Trading Framework — COMPLETE DOCUMENT</a></li>
+<li><a href="#exported-2026-06-07-1706"
+id="toc-exported-2026-06-07-1706">Exported: 2026-06-07 17:06</a></li>
+<li><a href="#files-merged-9" id="toc-files-merged-9">Files merged:
+9</a></li>
+<li><a href="#section"
+id="toc-section">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-skill.md" id="toc-file-skill.md">FILE:
+SKILL.md</a></li>
+<li><a href="#section-1"
+id="toc-section-1">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#chart-analysis-trading-framework-complete"
+id="toc-chart-analysis-trading-framework-complete">Chart Analysis &amp;
+Trading Framework — COMPLETE</a>
+<ul>
+<li><a href="#supply-and-demand-snd" id="toc-supply-and-demand-snd">1.
+SUPPLY AND DEMAND (SnD)</a>
+<ul>
+<li><a href="#core-principle" id="toc-core-principle">Core
+Principle</a></li>
+<li><a href="#snd-formations" id="toc-snd-formations">4 SnD
+Formations</a></li>
+<li><a href="#snd-flip" id="toc-snd-flip">SnD Flip</a></li>
+<li><a href="#snd-marking-cara-tandai-zona"
+id="toc-snd-marking-cara-tandai-zona">SnD Marking (Cara Tandai
+Zona)</a></li>
+<li><a href="#zone-levels-nazmier-amzar"
+id="toc-zone-levels-nazmier-amzar">3 Zone Levels (Nazmier
+Amzar)</a></li>
+<li><a href="#mpl-maximum-pain-level-detail"
+id="toc-mpl-maximum-pain-level-detail">MPL — Maximum Pain Level
+(Detail)</a></li>
+<li><a href="#engulfing-types-dari-sd-in-depth"
+id="toc-engulfing-types-dari-sd-in-depth">Engulfing Types (dari S&amp;D
+In-Depth)</a></li>
+<li><a href="#compression-cp" id="toc-compression-cp">Compression
+(CP)</a></li>
+<li><a href="#fakeout-false-breakout"
+id="toc-fakeout-false-breakout">Fakeout (False Breakout)</a></li>
+<li><a href="#quasimodo-over-under-pattern"
+id="toc-quasimodo-over-under-pattern">Quasimodo (Over &amp; Under
+Pattern)</a></li>
+</ul></li>
+<li><a href="#market-structure-powerful-setups-wade_fx"
+id="toc-market-structure-powerful-setups-wade_fx">2. MARKET STRUCTURE
+&amp; POWERFUL SETUPS (Wade_FX)</a>
+<ul>
+<li><a href="#expansion-retracement"
+id="toc-expansion-retracement">Expansion &amp; Retracement</a></li>
+<li><a href="#fibonacci-retracement"
+id="toc-fibonacci-retracement">Fibonacci Retracement</a></li>
+<li><a href="#bms-break-in-market-structure"
+id="toc-bms-break-in-market-structure">BMS — Break In Market
+Structure</a></li>
+<li><a href="#range-high-rh-range-low-rl"
+id="toc-range-high-rh-range-low-rl">Range High (RH) &amp; Range Low
+(RL)</a></li>
+<li><a href="#sms-failure-swing" id="toc-sms-failure-swing">SMS —
+Failure Swing</a></li>
+<li><a href="#market-structure" id="toc-market-structure">Market
+Structure</a></li>
+<li><a href="#liquidity-bab-3" id="toc-liquidity-bab-3">Liquidity (Bab
+3)</a></li>
+<li><a href="#order-blocks-ob-deep-dive"
+id="toc-order-blocks-ob-deep-dive">Order Blocks (OB) — DEEP
+DIVE</a></li>
+<li><a href="#sessions-daily-range"
+id="toc-sessions-daily-range">Sessions (Daily Range)</a></li>
+<li><a href="#amd-accumulation-manipulation-distribution"
+id="toc-amd-accumulation-manipulation-distribution">AMD — Accumulation,
+Manipulation, Distribution</a></li>
+<li><a href="#powerful-setups" id="toc-powerful-setups">POWERFUL
+SETUPS</a></li>
+<li><a href="#confluence-minimal-2-faktor"
+id="toc-confluence-minimal-2-faktor">Confluence (Minimal 2
+faktor)</a></li>
+<li><a href="#htfltf-framework" id="toc-htfltf-framework">HTF/LTF
+Framework</a></li>
+</ul></li>
+<li><a href="#liquidity-detail" id="toc-liquidity-detail">3. LIQUIDITY
+(Detail)</a>
+<ul>
+<li><a href="#retail-liquidity-types"
+id="toc-retail-liquidity-types">Retail Liquidity Types</a></li>
+<li><a href="#sudut-pandang-liquidity"
+id="toc-sudut-pandang-liquidity">Sudut Pandang Liquidity</a></li>
+</ul></li>
+<li><a href="#inducement" id="toc-inducement">4. INDUCEMENT</a>
+<ul>
+<li><a href="#apa-itu-inducement" id="toc-apa-itu-inducement">Apa itu
+Inducement</a></li>
+<li><a href="#inducement-purpose" id="toc-inducement-purpose">Inducement
+Purpose</a></li>
+<li><a href="#inducement-type-1-trend-baru-reversal-trap"
+id="toc-inducement-type-1-trend-baru-reversal-trap">Inducement Type 1:
+Trend Baru (Reversal Trap)</a></li>
+<li><a href="#inducement-type-2-continuation-trap"
+id="toc-inducement-type-2-continuation-trap">Inducement Type 2:
+Continuation Trap</a></li>
+<li><a href="#inducement-levels" id="toc-inducement-levels">Inducement
+Levels</a></li>
+<li><a href="#inducement-cycle" id="toc-inducement-cycle">Inducement
+Cycle</a></li>
+</ul></li>
+<li><a href="#smart-money-concept-smc"
+id="toc-smart-money-concept-smc">5. SMART MONEY CONCEPT (SMC)</a>
+<ul>
+<li><a href="#impulsive-corrective"
+id="toc-impulsive-corrective">Impulsive &amp; Corrective</a></li>
+<li><a href="#valid-pullback" id="toc-valid-pullback">Valid
+Pullback</a></li>
+<li><a href="#market-structure-mapping"
+id="toc-market-structure-mapping">Market Structure Mapping</a></li>
+<li><a href="#imbalance-fair-value-gap-fvg"
+id="toc-imbalance-fair-value-gap-fvg">Imbalance / Fair Value Gap
+(FVG)</a></li>
+<li><a href="#order-flow" id="toc-order-flow">Order Flow</a></li>
+<li><a href="#order-block-smc-version"
+id="toc-order-block-smc-version">Order Block (SMC version)</a></li>
+<li><a href="#retail-liquidity-smc-view"
+id="toc-retail-liquidity-smc-view">Retail Liquidity (SMC view)</a></li>
+</ul></li>
+<li><a href="#elliot-wave-theory" id="toc-elliot-wave-theory">6. ELLIOT
+WAVE THEORY</a>
+<ul>
+<li><a href="#dasar-turunan-dow-theory"
+id="toc-dasar-turunan-dow-theory">Dasar (Turunan Dow Theory)</a></li>
+<li><a href="#gerakan-utama" id="toc-gerakan-utama">2 Gerakan
+Utama</a></li>
+<li><a href="#impulsive-wave-unbreakable-rules"
+id="toc-impulsive-wave-unbreakable-rules">Impulsive Wave — UNBREAKABLE
+RULES</a></li>
+<li><a href="#wave-detail" id="toc-wave-detail">Wave Detail</a></li>
+<li><a href="#corrective-wave-abc"
+id="toc-corrective-wave-abc">Corrective Wave (ABC)</a></li>
+</ul></li>
+<li><a href="#the-magic-of-fibonacci" id="toc-the-magic-of-fibonacci">7.
+THE MAGIC OF FIBONACCI</a>
+<ul>
+<li><a href="#golden-ratio" id="toc-golden-ratio">Golden Ratio</a></li>
+<li><a href="#fibonacci-sebagai-ma-parameter"
+id="toc-fibonacci-sebagai-ma-parameter">Fibonacci sebagai MA
+Parameter</a></li>
+<li><a href="#basic-patterns" id="toc-basic-patterns">Basic
+Patterns</a></li>
+<li><a href="#priority-ratios" id="toc-priority-ratios">Priority
+Ratios</a></li>
+<li><a href="#fibonacci-phases" id="toc-fibonacci-phases">Fibonacci
+Phases</a></li>
+<li><a href="#jenis-supportresistance"
+id="toc-jenis-supportresistance">3 Jenis Support/Resistance</a></li>
+<li><a href="#fibonacci-price-cluster"
+id="toc-fibonacci-price-cluster">Fibonacci Price Cluster</a></li>
+<li><a href="#advanced-harmonic-patterns"
+id="toc-advanced-harmonic-patterns">Advanced Harmonic Patterns</a></li>
+</ul></li>
+<li><a href="#candlestick-patterns-12-dasar"
+id="toc-candlestick-patterns-12-dasar">8. CANDLESTICK PATTERNS (12
+Dasar)</a>
+<ul>
+<li><a href="#bullish" id="toc-bullish">Bullish</a></li>
+<li><a href="#bearish" id="toc-bearish">Bearish</a></li>
+<li><a href="#reversalindecision"
+id="toc-reversalindecision">Reversal/Indecision</a></li>
+<li><a href="#reversal-patterns" id="toc-reversal-patterns">Reversal
+Patterns</a></li>
+</ul></li>
+<li><a href="#risk-management-elder-non-negotiable"
+id="toc-risk-management-elder-non-negotiable">9. RISK MANAGEMENT (Elder
+— NON-NEGOTIABLE)</a>
+<ul>
+<li><a href="#user-override-2026-06-06"
+id="toc-user-override-2026-06-06">User Override (2026-06-06)</a></li>
+<li><a href="#two-percent-rule-shark-repellent-elders-original"
+id="toc-two-percent-rule-shark-repellent-elders-original">Two Percent
+Rule — SHARK REPELLENT (Elder’s Original)</a></li>
+<li><a href="#six-percent-rule-bulletproof"
+id="toc-six-percent-rule-bulletproof">Six Percent Rule —
+BULLETPROOF</a></li>
+<li><a href="#position-sizing-formula"
+id="toc-position-sizing-formula">Position Sizing Formula</a></li>
+<li><a href="#profit-targets-enough-is-the-power-word"
+id="toc-profit-targets-enough-is-the-power-word">Profit Targets —
+“Enough” Is the Power Word</a></li>
+<li><a href="#how-to-set-stops" id="toc-how-to-set-stops">How to Set
+Stops</a></li>
+</ul></li>
+<li><a href="#multi-timeframe-system-elder-triple-screen-impulse"
+id="toc-multi-timeframe-system-elder-triple-screen-impulse">10.
+MULTI-TIMEFRAME SYSTEM (Elder — Triple Screen + Impulse)</a>
+<ul>
+<li><a href="#triple-screen-trading-system"
+id="toc-triple-screen-trading-system">Triple Screen Trading
+System</a></li>
+<li><a href="#impulse-system-13-ema-macd-histogram"
+id="toc-impulse-system-13-ema-macd-histogram">Impulse System (13 EMA +
+MACD Histogram)</a></li>
+<li><a href="#a-trade-concept-elder"
+id="toc-a-trade-concept-elder">A-Trade Concept (Elder)</a></li>
+</ul></li>
+<li><a href="#dow-theory-market-phases"
+id="toc-dow-theory-market-phases">11. DOW THEORY — MARKET PHASES</a>
+<ul>
+<li><a href="#three-movements" id="toc-three-movements">Three
+Movements</a></li>
+<li><a href="#three-phases-of-bull-market"
+id="toc-three-phases-of-bull-market">Three Phases of Bull
+Market</a></li>
+<li><a href="#three-phases-of-bear-market"
+id="toc-three-phases-of-bear-market">Three Phases of Bear
+Market</a></li>
+<li><a href="#volume-confirmation" id="toc-volume-confirmation">Volume
+Confirmation</a></li>
+</ul></li>
+<li><a href="#trading-psychology-elder-aziz-gabungan"
+id="toc-trading-psychology-elder-aziz-gabungan">12. TRADING PSYCHOLOGY
+(Elder + Aziz — Gabungan)</a>
+<ul>
+<li><a href="#success-cycle-elder" id="toc-success-cycle-elder">Success
+Cycle (Elder)</a></li>
+<li><a href="#deadly-sins-of-trading-aziz"
+id="toc-deadly-sins-of-trading-aziz">7 Deadly Sins of Trading
+(Aziz)</a></li>
+<li><a href="#circuit-breakers-aziz"
+id="toc-circuit-breakers-aziz">Circuit Breakers (Aziz)</a></li>
+<li><a href="#psychology-safeguards-aziz"
+id="toc-psychology-safeguards-aziz">Psychology Safeguards
+(Aziz)</a></li>
+<li><a href="#process-over-pl-aziz"
+id="toc-process-over-pl-aziz">Process Over P&amp;L (Aziz)</a></li>
+<li><a href="#mindset-trader-profesional"
+id="toc-mindset-trader-profesional">Mindset Trader Profesional</a></li>
+<li><a href="#teknik-terlarang" id="toc-teknik-terlarang">Teknik
+TERLARANG</a></li>
+</ul></li>
+<li><a href="#trade-journal-daily-routine"
+id="toc-trade-journal-daily-routine">13. TRADE JOURNAL &amp; DAILY
+ROUTINE</a>
+<ul>
+<li><a href="#daily-homework-wajib-sebelum-trading"
+id="toc-daily-homework-wajib-sebelum-trading">Daily Homework (Wajib
+Sebelum Trading)</a></li>
+<li><a href="#multi-pair-scanning"
+id="toc-multi-pair-scanning">Multi-Pair Scanning</a></li>
+<li><a href="#automated-scanning-pitfalls"
+id="toc-automated-scanning-pitfalls">Automated Scanning
+Pitfalls</a></li>
+<li><a href="#trade-record-format" id="toc-trade-record-format">Trade
+Record Format</a></li>
+<li><a href="#weekly-review" id="toc-weekly-review">Weekly
+Review</a></li>
+<li><a href="#teknik-terlarang-1" id="toc-teknik-terlarang-1">Teknik
+TERLARANG</a></li>
+</ul></li>
+<li><a href="#scalping-techniques" id="toc-scalping-techniques">14.
+SCALPING TECHNIQUES</a>
+<ul>
+<li><a href="#teknik-ma-crossover-scalping-m1m5m15"
+id="toc-teknik-ma-crossover-scalping-m1m5m15">Teknik MA Crossover
+Scalping (M1/M5/M15)</a></li>
+<li><a href="#price-action-scalper-4-screen-system"
+id="toc-price-action-scalper-4-screen-system">Price Action Scalper
+(4-Screen System)</a></li>
+</ul></li>
+<li><a href="#fibonacci-trading-praktis---fibo-derhaka"
+id="toc-fibonacci-trading-praktis---fibo-derhaka">15. FIBONACCI TRADING
+(Praktis - Fibo Derhaka)</a>
+<ul>
+<li><a href="#fibonacci-retracement-levels"
+id="toc-fibonacci-retracement-levels">Fibonacci Retracement
+Levels</a></li>
+<li><a href="#fibonacci-extension-levels"
+id="toc-fibonacci-extension-levels">Fibonacci Extension Levels</a></li>
+<li><a href="#cara-pakai" id="toc-cara-pakai">Cara Pakai</a></li>
+<li><a href="#swing-highlow-definition"
+id="toc-swing-highlow-definition">Swing High/Low Definition</a></li>
+</ul></li>
+<li><a href="#kamus-candlestick-lengkap-89-pola"
+id="toc-kamus-candlestick-lengkap-89-pola">16. KAMUS CANDLESTICK LENGKAP
+(89 Pola)</a>
+<ul>
+<li><a href="#level-1-paling-reliabel-jarang-perlu-konfirmasi"
+id="toc-level-1-paling-reliabel-jarang-perlu-konfirmasi">Level 1 (Paling
+Reliabel, jarang perlu konfirmasi)</a></li>
+<li><a href="#level-2" id="toc-level-2">Level 2</a></li>
+<li><a href="#level-3" id="toc-level-3">Level 3</a></li>
+<li><a href="#level-4" id="toc-level-4">Level 4</a></li>
+<li><a href="#continuation-patterns"
+id="toc-continuation-patterns">Continuation Patterns</a></li>
+<li><a href="#consolidation-patterns"
+id="toc-consolidation-patterns">Consolidation Patterns</a></li>
+<li><a href="#psikologi-candlestick"
+id="toc-psikologi-candlestick">Psikologi Candlestick</a></li>
+</ul></li>
+<li><a href="#entrytpsl-format-wajib-di-akhir-setiap-analisis"
+id="toc-entrytpsl-format-wajib-di-akhir-setiap-analisis">17. ENTRY/TP/SL
+FORMAT (WAJIB di akhir setiap analisis)</a>
+<ul>
+<li><a href="#long-setup" id="toc-long-setup">📌 LONG SETUP</a></li>
+<li><a href="#short-setup" id="toc-short-setup">📌 SHORT SETUP</a></li>
+<li><a href="#rules-entrytpsl" id="toc-rules-entrytpsl">Rules
+Entry/TP/SL:</a></li>
+</ul></li>
+<li><a href="#multi-pair-scanning-auto-trading"
+id="toc-multi-pair-scanning-auto-trading">14. MULTI-PAIR SCANNING &amp;
+AUTO-TRADING</a>
+<ul>
+<li><a href="#scan-workflow-when-user-asks-cari-coin-bagus-scan-pairs"
+id="toc-scan-workflow-when-user-asks-cari-coin-bagus-scan-pairs">Scan
+Workflow (when user asks “cari coin bagus” / “scan pairs”)</a></li>
+<li><a href="#auto-monitor-pattern-background-execution"
+id="toc-auto-monitor-pattern-background-execution">Auto-Monitor Pattern
+(background execution)</a></li>
+<li><a href="#position-management-rules-from-elder"
+id="toc-position-management-rules-from-elder">Position Management Rules
+(from Elder)</a></li>
+</ul></li>
+<li><a href="#full-scanner-architecture-11-modules"
+id="toc-full-scanner-architecture-11-modules">Full Scanner Architecture
+(11 Modules)</a></li>
+<li><a href="#pitfalls" id="toc-pitfalls">Pitfalls</a>
+<ul>
+<li><a href="#mandatory-workflow-user-rule-2026-06-06"
+id="toc-mandatory-workflow-user-rule-2026-06-06">MANDATORY Workflow
+(User Rule — 2026-06-06)</a></li>
+<li><a href="#analysis-workflow-when-analyzing-a-chart"
+id="toc-analysis-workflow-when-analyzing-a-chart">Analysis Workflow
+(When Analyzing a Chart)</a></li>
+<li><a href="#mandatory-rule-analysis-before-entry"
+id="toc-mandatory-rule-analysis-before-entry">MANDATORY RULE: Analysis
+Before Entry</a></li>
+<li><a href="#step-1-gather-data" id="toc-step-1-gather-data">Step 1:
+Gather Data</a></li>
+<li><a href="#step-2-identify-market-structure"
+id="toc-step-2-identify-market-structure">Step 2: Identify Market
+Structure</a></li>
+<li><a href="#step-3-mark-liquidity-pools"
+id="toc-step-3-mark-liquidity-pools">Step 3: Mark Liquidity
+Pools</a></li>
+<li><a href="#step-4-fibonacci" id="toc-step-4-fibonacci">Step 4:
+Fibonacci</a></li>
+<li><a href="#step-5-volume-analysis"
+id="toc-step-5-volume-analysis">Step 5: Volume Analysis</a></li>
+<li><a href="#step-5.5-impulse-system-check-elder-mandatory"
+id="toc-step-5.5-impulse-system-check-elder-mandatory">Step 5.5: Impulse
+System Check (Elder — MANDATORY)</a></li>
+<li><a href="#step-6-order-block-identification"
+id="toc-step-6-order-block-identification">Step 6: Order Block
+Identification</a></li>
+<li><a href="#step-7-select-setup" id="toc-step-7-select-setup">Step 7:
+Select Setup</a></li>
+<li><a href="#step-8-output-format" id="toc-step-8-output-format">Step
+8: Output Format</a></li>
+</ul></li>
+<li><a href="#pitfalls-1" id="toc-pitfalls-1">Pitfalls</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
+</ul></li>
+<li><a href="#section-2"
+id="toc-section-2">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesrisk-management-10-account.md"
+id="toc-file-referencesrisk-management-10-account.md">FILE:
+references/risk-management-10-account.md</a></li>
+<li><a href="#section-3"
+id="toc-section-3">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#risk-management-10-account-reference"
+id="toc-risk-management-10-account-reference">Risk Management — $10
+Account Reference</a>
+<ul>
+<li><a href="#account-parameters-user-config-updated-2026-06-06"
+id="toc-account-parameters-user-config-updated-2026-06-06">Account
+Parameters (User Config — Updated 2026-06-06)</a></li>
+<li><a href="#profitloss-per-trade-rr-12.5-1-margin"
+id="toc-profitloss-per-trade-rr-12.5-1-margin">Profit/Loss Per Trade (RR
+1:2.5, $1 margin)</a></li>
+<li><a href="#trade-scenarios-rr-12.5"
+id="toc-trade-scenarios-rr-12.5">10-Trade Scenarios (RR 1:2.5)</a></li>
+<li><a href="#trade-scenarios-rr-12.8"
+id="toc-trade-scenarios-rr-12.8">10-Trade Scenarios (RR 1:2.8)</a></li>
+<li><a href="#breakeven-win-rate" id="toc-breakeven-win-rate">Breakeven
+Win Rate</a></li>
+<li><a href="#max-drawdown-scenarios"
+id="toc-max-drawdown-scenarios">Max Drawdown Scenarios</a></li>
+<li><a href="#position-sizing-formula-1"
+id="toc-position-sizing-formula-1">Position Sizing Formula</a></li>
+<li><a href="#key-insight" id="toc-key-insight">Key Insight</a></li>
+<li><a href="#account-killing-mistakes"
+id="toc-account-killing-mistakes">Account Killing Mistakes</a></li>
+</ul></li>
+<li><a href="#section-4"
+id="toc-section-4">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesratakan-strategy.md"
+id="toc-file-referencesratakan-strategy.md">FILE:
+references/ratakan-strategy.md</a></li>
+<li><a href="#section-5"
+id="toc-section-5">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#ratakan-strategy-small-account-high-leverage"
+id="toc-ratakan-strategy-small-account-high-leverage">RATAKAN Strategy —
+Small Account, High Leverage</a>
+<ul>
+<li><a href="#config" id="toc-config">Config</a></li>
+<li><a href="#risk-profile-50x-leverage"
+id="toc-risk-profile-50x-leverage">Risk Profile (50x leverage)</a></li>
+<li><a href="#flow" id="toc-flow">Flow</a></li>
+<li><a href="#partial-close-logic" id="toc-partial-close-logic">Partial
+Close Logic</a></li>
+<li><a href="#bitget-max-leverage-by-coin"
+id="toc-bitget-max-leverage-by-coin">Bitget Max Leverage by
+Coin</a></li>
+<li><a href="#pitfalls-2" id="toc-pitfalls-2">Pitfalls</a></li>
+</ul></li>
+<li><a href="#section-6"
+id="toc-section-6">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesmulti-pair-scanning.md"
+id="toc-file-referencesmulti-pair-scanning.md">FILE:
+references/multi-pair-scanning.md</a></li>
+<li><a href="#section-7"
+id="toc-section-7">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#multi-pair-scanning-auto-monitoring"
+id="toc-multi-pair-scanning-auto-monitoring">Multi-Pair Scanning &amp;
+Auto-Monitoring</a>
+<ul>
+<li><a href="#multi-pair-scoring-system-for-scalping"
+id="toc-multi-pair-scoring-system-for-scalping">Multi-Pair Scoring
+System for Scalping</a>
+<ul>
+<li><a href="#scoring-formula" id="toc-scoring-formula">Scoring
+Formula</a></li>
+<li><a href="#metrics-per-pair" id="toc-metrics-per-pair">Metrics Per
+Pair</a></li>
+<li><a href="#data-sources" id="toc-data-sources">Data Sources</a></li>
+<li><a href="#default-pairs-to-scan"
+id="toc-default-pairs-to-scan">Default Pairs to Scan</a></li>
+</ul></li>
+<li><a href="#auto-monitor-entry-workflow"
+id="toc-auto-monitor-entry-workflow">Auto-Monitor &amp; Entry
+Workflow</a>
+<ul>
+<li><a href="#architecture" id="toc-architecture">Architecture</a></li>
+<li><a href="#reversal-signal-detection-15m-timeframe"
+id="toc-reversal-signal-detection-15m-timeframe">Reversal Signal
+Detection (15m timeframe)</a></li>
+<li><a href="#entry-conditions" id="toc-entry-conditions">Entry
+Conditions</a></li>
+<li><a href="#state-management" id="toc-state-management">State
+Management</a></li>
+<li><a href="#pitfalls-3" id="toc-pitfalls-3">Pitfalls</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#section-8"
+id="toc-section-8">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesauto-entry-monitor.md"
+id="toc-file-referencesauto-entry-monitor.md">FILE:
+references/auto-entry-monitor.md</a></li>
+<li><a href="#section-9"
+id="toc-section-9">═══════════════════════════════════════════════════════</a>
+<ul>
+<li><a href="#auto-entry-monitor-pattern"
+id="toc-auto-entry-monitor-pattern">Auto-Entry Monitor Pattern</a>
+<ul>
+<li><a href="#when-to-use" id="toc-when-to-use">When to Use</a></li>
+<li><a href="#architecture-1"
+id="toc-architecture-1">Architecture</a></li>
+<li><a href="#monitor-script-structure"
+id="toc-monitor-script-structure">Monitor Script Structure</a></li>
+<li><a href="#critical-bitget-fixes-verified-2026-06-06"
+id="toc-critical-bitget-fixes-verified-2026-06-06">Critical Bitget Fixes
+(verified 2026-06-06)</a></li>
+<li><a href="#running-pattern" id="toc-running-pattern">Running
+Pattern</a></li>
+<li><a href="#pitfalls-4" id="toc-pitfalls-4">Pitfalls</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#section-10"
+id="toc-section-10">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesauto-monitor-pattern.md"
+id="toc-file-referencesauto-monitor-pattern.md">FILE:
+references/auto-monitor-pattern.md</a></li>
+<li><a href="#section-11"
+id="toc-section-11">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#auto-monitor-auto-trade-pattern"
+id="toc-auto-monitor-auto-trade-pattern">Auto-Monitor &amp; Auto-Trade
+Pattern</a>
+<ul>
+<li><a href="#architecture-2"
+id="toc-architecture-2">Architecture</a></li>
+<li><a href="#config-template" id="toc-config-template">Config
+Template</a></li>
+<li><a href="#signal-detection-logic"
+id="toc-signal-detection-logic">Signal Detection Logic</a></li>
+<li><a href="#trade-execution" id="toc-trade-execution">Trade
+Execution</a></li>
+<li><a href="#notification-format"
+id="toc-notification-format">Notification Format</a></li>
+<li><a href="#background-execution"
+id="toc-background-execution">Background Execution</a></li>
+<li><a href="#multi-monitor-pattern"
+id="toc-multi-monitor-pattern">Multi-Monitor Pattern</a></li>
+<li><a href="#scanner-architecture"
+id="toc-scanner-architecture">Scanner Architecture</a></li>
+<li><a href="#pitfalls-5" id="toc-pitfalls-5">Pitfalls</a></li>
+</ul></li>
+<li><a href="#section-12"
+id="toc-section-12">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesbitget-futures-api.md"
+id="toc-file-referencesbitget-futures-api.md">FILE:
+references/bitget-futures-api.md</a></li>
+<li><a href="#section-13"
+id="toc-section-13">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#bitget-futures-api-reference"
+id="toc-bitget-futures-api-reference">Bitget Futures API Reference</a>
+<ul>
+<li><a href="#setup" id="toc-setup">Setup</a></li>
+<li><a href="#api-v2-endpoints-verified-working"
+id="toc-api-v2-endpoints-verified-working">API v2 Endpoints (Verified
+Working)</a>
+<ul>
+<li><a href="#market-data-public-no-auth"
+id="toc-market-data-public-no-auth">Market Data (Public — No
+Auth)</a></li>
+<li><a href="#account-auth-required-hmac-sha256"
+id="toc-account-auth-required-hmac-sha256">Account (Auth Required — HMAC
+SHA256)</a></li>
+<li><a href="#positions" id="toc-positions">Positions</a></li>
+<li><a href="#orders" id="toc-orders">Orders</a></li>
+</ul></li>
+<li><a href="#auth-headers" id="toc-auth-headers">Auth Headers</a></li>
+<li><a href="#trading-engine-commands"
+id="toc-trading-engine-commands">Trading Engine Commands</a></li>
+<li><a href="#pitfalls-6" id="toc-pitfalls-6">Pitfalls</a></li>
+<li><a href="#laporan-futures-format-user-preference"
+id="toc-laporan-futures-format-user-preference">LAPORAN FUTURES Format
+(User Preference)</a></li>
+</ul></li>
+<li><a href="#section-14"
+id="toc-section-14">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesdeep-analysis-session-2026-06-06.md"
+id="toc-file-referencesdeep-analysis-session-2026-06-06.md">FILE:
+references/deep-analysis-session-2026-06-06.md</a></li>
+<li><a href="#section-15"
+id="toc-section-15">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#deep-analysis-reference-session-2026-06-06"
+id="toc-deep-analysis-reference-session-2026-06-06">Deep Analysis
+Reference — Session 2026-06-06</a>
+<ul>
+<li><a href="#context" id="toc-context">Context</a></li>
+<li><a href="#analysis-template-8-criteria"
+id="toc-analysis-template-8-criteria">Analysis Template (8 Criteria)</a>
+<ul>
+<li><a href="#criteria-analyzed" id="toc-criteria-analyzed">Criteria
+Analyzed</a></li>
+<li><a href="#output-format-per-coin"
+id="toc-output-format-per-coin">Output Format Per Coin</a></li>
+</ul></li>
+<li><a href="#session-results" id="toc-session-results">Session
+Results</a>
+<ul>
+<li><a href="#nearusdt-1.87" id="toc-nearusdt-1.87">NEAR/USDT
+($1.87)</a></li>
+<li><a href="#avaxusdt-6.59" id="toc-avaxusdt-6.59">AVAX/USDT
+($6.59)</a></li>
+<li><a href="#arbusdt-0.0786" id="toc-arbusdt-0.0786">ARB/USDT
+($0.0786)</a></li>
+</ul></li>
+<li><a href="#key-lesson" id="toc-key-lesson">Key Lesson</a></li>
+</ul></li>
+<li><a href="#section-16"
+id="toc-section-16">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#file-referencesbinance-api-examples.md"
+id="toc-file-referencesbinance-api-examples.md">FILE:
+references/binance-api-examples.md</a></li>
+<li><a href="#section-17"
+id="toc-section-17">═══════════════════════════════════════════════════════</a></li>
+<li><a href="#binance-api-for-chart-analysis"
+id="toc-binance-api-for-chart-analysis">Binance API for Chart
+Analysis</a>
+<ul>
+<li><a href="#ohlcv-data-no-auth-required"
+id="toc-ohlcv-data-no-auth-required">OHLCV Data (No Auth Required)</a>
+<ul>
+<li><a href="#endpoints" id="toc-endpoints">Endpoints</a></li>
+<li><a href="#parameters" id="toc-parameters">Parameters</a></li>
+<li><a href="#response-format" id="toc-response-format">Response
+Format</a></li>
+<li><a href="#python-snippet" id="toc-python-snippet">Python
+Snippet</a></li>
+<li><a href="#swing-point-detection"
+id="toc-swing-point-detection">Swing Point Detection</a></li>
+<li><a href="#equal-highslows-detection-liquidity"
+id="toc-equal-highslows-detection-liquidity">Equal Highs/Lows Detection
+(Liquidity)</a></li>
+</ul></li>
+<li><a href="#ocr-fallback-when-vision-model-is-down"
+id="toc-ocr-fallback-when-vision-model-is-down">OCR Fallback (When
+Vision Model is Down)</a>
+<ul>
+<li><a href="#ocr-tips-for-tradingview"
+id="toc-ocr-tips-for-tradingview">OCR Tips for TradingView</a></li>
+</ul></li>
+<li><a href="#quick-price-check" id="toc-quick-price-check">Quick Price
+Check</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="chart-analysis-trading-framework-complete-document">Chart
+Analysis &amp; Trading Framework — COMPLETE DOCUMENT</h1>
+<h1 id="exported-2026-06-07-1706">Exported: 2026-06-07 17:06</h1>
+<h1 id="files-merged-9">Files merged: 9</h1>
+<hr />
+<h1
+id="section">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-skill.md">FILE: SKILL.md</h1>
+<h1
+id="section-1">═══════════════════════════════════════════════════════</h1>
+<h1 id="chart-analysis-trading-framework-complete">Chart Analysis &amp;
+Trading Framework — COMPLETE</h1>
+<h2 id="supply-and-demand-snd">1. SUPPLY AND DEMAND (SnD)</h2>
+<h3 id="core-principle">Core Principle</h3>
+<ul>
+<li>Supply = ketersediaan, Demand = permintaan</li>
+<li>Supply bertambah → harga turun, Demand bertambah → harga naik</li>
+<li>Harga mencari titik equilibrium (keseimbangan supply-demand)</li>
+</ul>
+<h3 id="snd-formations">4 SnD Formations</h3>
+<ol type="1">
+<li><strong>Rally Base Rally (RBR)</strong> — rally, konsolidasi, rally
+lanjut</li>
+<li><strong>Rally Base Drop (RBD)</strong> — rally, konsolidasi,
+reversal drop</li>
+<li><strong>Drop Base Rally (DBR)</strong> — drop, konsolidasi, reversal
+rally</li>
+<li><strong>Drop Base Drop (DBD)</strong> — drop, konsolidasi, drop
+lanjut</li>
+</ol>
+<h3 id="snd-flip">SnD Flip</h3>
+<ul>
+<li>Supply ditembus harga → Supply becomes Demand</li>
+<li>Demand ditembus harga → Demand becomes Supply</li>
+</ul>
+<h3 id="snd-marking-cara-tandai-zona">SnD Marking (Cara Tandai
+Zona)</h3>
+<ol type="1">
+<li>Candle Terjepit</li>
+<li>Area Sideway</li>
+<li>Candle Double Marubozu</li>
+</ol>
+<p><strong>Standard Marking:</strong> Dari candle pertama Low → ke
+candle kedua High <strong>Long Wick Marking:</strong> Dari candle
+pertama Open/Close → ke candle High/Low (tergantung bullish/bearish)</p>
+<p><strong>Rule:</strong> Zona SnD terbaik = FRESH (belum pernah
+disentuh harga). Jika sudah pernah disentuh → kemungkinan besar akan
+ditembus.</p>
+<h3 id="zone-levels-nazmier-amzar">3 Zone Levels (Nazmier Amzar)</h3>
+<ul>
+<li><strong>Top Zone:</strong> Entry SELL (Supply DBD/RBD) — MPL +
+Bearish Engulfing</li>
+<li><strong>Mid Zone:</strong> Entry BUY/SELL (RBR Supply / DBD Supply)
+— Engulfing di zone fresh</li>
+<li><strong>Lower Zone:</strong> Entry BUY (Demand DBR/RBR) — MPL +
+Bullish Engulfing</li>
+</ul>
+<h3 id="mpl-maximum-pain-level-detail">MPL — Maximum Pain Level
+(Detail)</h3>
+<ul>
+<li>MPL = level di dalam QM dimana price paling menyakitkan bagi
+retail</li>
+<li><strong>Untuk SELL:</strong> Cari long RED marubozu yang break
+previous candle’s Low (support)</li>
+<li><strong>Untuk BUY:</strong> Cari long BLUE marubozu yang break
+previous candle’s High (resistance)</li>
+<li>90% trader gagal karena tidak perhatikan MPL</li>
+<li><strong>Engulfing terbaik = di MPL zone</strong></li>
+</ul>
+<h3 id="engulfing-types-dari-sd-in-depth">Engulfing Types (dari S&amp;D
+In-Depth)</h3>
+<p><strong>Bearish Engulfing (di MPL Supply Zone):</strong> - Type 1:
+Blue + Red (shadow Red lebih tinggi dari Blue) - Type 2: Red + Red
+(shadow Red lebih tinggi dari previous) - Type 3a: Blue + Red (shadow
+candle pertama lebih tinggi) - Type 3b: Red + Red (candle pertama punya
+higher shadow)</p>
+<p><strong>Bullish Engulfing (di MPL Demand Zone):</strong> - Type 1:
+Red + Blue (shadow Blue lebih rendah dari Red) - Type 2: Blue + Blue
+(shadow Blue lebih rendah dari previous) - Type 3a: Red + Blue (shadow
+candle pertama lebih rendah) - Type 3b: Blue + Blue (candle pertama
+punya lower shadow)</p>
+<p><strong>Strong Momentum Engulfing:</strong> Diikuti Marubozu lagi →
+75% positive results <strong>Weak Engulfing:</strong> Tanpa continuation
+→ 50-50, avoid</p>
+<p><strong>Rules Strong Momentum:</strong> 1. Harus IN BETWEEN zone 2.
+Diikuti Marubozu continuation 3. Fresh zone &gt; used zone</p>
+<h3 id="compression-cp">Compression (CP)</h3>
+<ul>
+<li>Pergerakan harga padat = pertarungan buyer vs seller</li>
+<li>Seluruh supply/demand sudah terisi → harga menuju supply/demand yang
+belum terisi</li>
+<li>Tipe: Subsidiary, Central</li>
+</ul>
+<h3 id="fakeout-false-breakout">Fakeout (False Breakout)</h3>
+<ul>
+<li>Harga tembus support/resistance tapi tidak lanjut trend →
+reversal</li>
+<li>Syarat: minimal 2 support/resistance sejajar</li>
+</ul>
+<h3 id="quasimodo-over-under-pattern">Quasimodo (Over &amp; Under
+Pattern)</h3>
+<ul>
+<li>Pola reversal, mirip Head &amp; Shoulder</li>
+<li>Perbedaan: Lower low setelah neckline (bearish) / Higher high
+setelah neckline (bullish)</li>
+</ul>
+<hr />
+<h2 id="market-structure-powerful-setups-wade_fx">2. MARKET STRUCTURE
+&amp; POWERFUL SETUPS (Wade_FX)</h2>
+<h3 id="expansion-retracement">Expansion &amp; Retracement</h3>
+<ul>
+<li><strong>Expansion</strong> = impulse movement ke satu arah</li>
+<li><strong>Retracement</strong> = correction setelah impulse</li>
+<li>Uptrend: E-R-E-R-E (expansion-retrace-expansion…)</li>
+<li>Downtrend: sama tapi ke bawah</li>
+</ul>
+<h3 id="fibonacci-retracement">Fibonacci Retracement</h3>
+<ul>
+<li>Gunakan untuk tentukan akhir retracement</li>
+<li>Harga biasanya retrace ke <strong>50%</strong> atau <strong>OTE
+(0.62, 0.705, 0.79)</strong> sebelum impulse berikutnya</li>
+</ul>
+<h3 id="bms-break-in-market-structure">BMS — Break In Market
+Structure</h3>
+<ul>
+<li>Harga close di atas/below swing high/low</li>
+<li><strong>Trade di arah HTF BMS</strong></li>
+<li><strong>Setelah BMS → SELALU tunggu retracement</strong></li>
+</ul>
+<h3 id="range-high-rh-range-low-rl">Range High (RH) &amp; Range Low
+(RL)</h3>
+<ul>
+<li>Setelah BMS → selalu ada konsolidasi baru = RH &amp; RL</li>
+<li>Trade di arah BMS, tunggu retracement ke 50%/OTE</li>
+</ul>
+<h3 id="sms-failure-swing">SMS — Failure Swing</h3>
+<ul>
+<li>Uptrend: harga gagal break swing high terakhir → break swing low
+sebelumnya = Bearish SMS</li>
+<li>Downtrend: harga gagal break swing low → break swing high = Bullish
+SMS</li>
+</ul>
+<h3 id="market-structure">Market Structure</h3>
+<ul>
+<li>3 fase: <strong>Consolidation, Uptrend, Downtrend</strong></li>
+<li>Bullish: HH + HL (Higher High + Higher Low), break swing high,
+respect swing low</li>
+<li>Bearish: LH + LL, break swing low, respect swing high</li>
+</ul>
+<h3 id="liquidity-bab-3">Liquidity (Bab 3)</h3>
+<ul>
+<li>Forex = zero sum game, bank butuh lawan</li>
+<li>Liquidity = Stop Losses. Dimana SL ada → disitu liquidity ada</li>
+<li><strong>2 tipe:</strong> BSL (Buy Stops) &amp; SSL (Sell Stops)</li>
+</ul>
+<p><strong>BSL Focus:</strong> PMH, PWH, PDH, HOD, Old High, Equal Highs
+(= retail resistance) <strong>SSL Focus:</strong> PML, PWL, PDL, LOD,
+Old Low, Equal Lows (= retail support)</p>
+<ul>
+<li>BSL taken → market reverse down</li>
+<li>SSL taken → market reverse up</li>
+<li><strong>Stop Hunt (SH)</strong> = false breakout above/below
+liquidity zone</li>
+</ul>
+<h3 id="order-blocks-ob-deep-dive">Order Blocks (OB) — DEEP DIVE</h3>
+<p><strong>Apa itu OB?</strong> OB = <strong>tempat terakhir institusi
+menempatkan order sebelum pergerakan besar terjadi</strong>. Kita
+trading di “footprint” yang ditinggalkan institusi.</p>
+<p><strong>Mengapa OB bekerja?</strong> - Institusi push harga ke satu
+arah untuk ambil liquidity (stop loss retail) - Mereka taruh posisi
+berlawanan (misal: sell dulu untuk push harga turun, lalu buy dari
+bawah) - Posisi berlawanan ini masih dalam drawdown → mereka perlu
+MITIGATE (tutup di break even / small loss) - <strong>Mitigation =
+dimana harga kembali ke OB</strong> → disini kita entry</p>
+<p><strong>Bullish OB:</strong> candle bearish TERAKHIR sebelum bullish
+move yang BMS <strong>Bearish OB:</strong> candle bullish TERAKHIR
+sebelum bearish move yang BMS</p>
+<p><strong>SYARAT MUTLAK:</strong> OB HARUS menyebabkan <strong>BOS
+(Break of Structure)</strong> - Jika tidak ada BOS → BUKAN OB yang valid
+- Candle biasa tanpa BOS = bukan OB, hanya candle random</p>
+<p><strong>Identifikasi OB:</strong> 1. Cari impulse move besar
+(institutional activity) 2. Cari candle TERAKHIR sebelum impulse
+(berlawanan warna) 3. Pastikan candle tersebut menyebabkan BOS 4. OB di
+mitigation zone = entry point</p>
+<p><strong>OB vs Trendline/Fib:</strong> - Trendline &amp; Fib =
+probability-based (kadang work, kadang tidak) - OB = institutional
+footprint (lebih reliable karena berdasarkan aktivitas nyata) - Retail
+S/R sering di-break karena institusi ambil SL di area tersebut</p>
+<h3 id="sessions-daily-range">Sessions (Daily Range)</h3>
+<ul>
+<li><strong>Asian Session</strong> (02:00-08:00 UTC+2): Konsolidasi
+20-40 pips, low liquidity</li>
+<li><strong>London Session</strong> (09:00-12:00 UTC+2): Buat LOD/HOD,
+manipulasi liquidity</li>
+<li><strong>NY Session</strong> (14:00-17:00 UTC+2): Retracement setelah
+London, kadang buat HOD/LOD</li>
+</ul>
+<h3 id="amd-accumulation-manipulation-distribution">AMD — Accumulation,
+Manipulation, Distribution</h3>
+<ol type="1">
+<li><strong>Accumulation:</strong> Ranging/consolidation (biasanya Asian
+session)</li>
+<li><strong>Manipulation:</strong> Break range ke arah berlawanan untuk
+trap trader (London/NY open)</li>
+<li><strong>Distribution:</strong> Harga bergerak ke arah SEBENARNYA,
+entry di RTO/SH+BMS+RTO/SMS+BMS+RTO</li>
+</ol>
+<h3 id="powerful-setups">POWERFUL SETUPS</h3>
+<p><strong>1. Turtle Soup (TS)</strong> - False breakout 5-20 pips di
+atas/below liquidity - <strong>Turtle Soup Short (TSS):</strong> BSL
+raid → sell dengan SL min 10 pips - <strong>Turtle Soup Long
+(TSL):</strong> SSL raid → buy dengan SL min 10 pips</p>
+<p><strong>2. SH + BMS + RTO</strong> - Stop Hunt → Break Market
+Structure → Return To Order Block - SH = ambil liquidity → BMS =
+konfirmasi → RTO = entry di OB</p>
+<p><strong>3. SMS + BMS + RTO</strong> - Failure Swing → BMS → Return To
+OB</p>
+<p><strong>4. AMD</strong> - Entry di Distribution phase pakai RTO,
+SH+BMS+RTO, atau SMS+BMS+RTO</p>
+<h3 id="confluence-minimal-2-faktor">Confluence (Minimal 2 faktor)</h3>
+<ul>
+<li>HTF Analysis</li>
+<li>London/NY Open timing</li>
+<li>HTF key levels di LTF entries</li>
+<li>Gabung setups</li>
+<li>High Impact News Events</li>
+</ul>
+<h3 id="htfltf-framework">HTF/LTF Framework</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Style</th>
+<th>HTF</th>
+<th>Entry TF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Swing</td>
+<td>W, D, H4</td>
+<td>H1, M30, M15</td>
+</tr>
+<tr class="even">
+<td>Short Term</td>
+<td>D, H4, H1</td>
+<td>M30, M15</td>
+</tr>
+<tr class="odd">
+<td>Day/Scalp</td>
+<td>H4, H1, M30</td>
+<td>M15, M5, M1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="liquidity-detail">3. LIQUIDITY (Detail)</h2>
+<h3 id="retail-liquidity-types">Retail Liquidity Types</h3>
+<ol type="1">
+<li><strong>Equal Highs &amp; Equal Lows</strong> — Retail lihat S/R /
+Double Top/Bottom → bank ambil SL</li>
+<li><strong>Key Level Liquidity</strong> — Zona dipakai beberapa kali →
+bank paksa ranging lalu breakout impulsive</li>
+<li><strong>Break &amp; Retest Liquidity</strong> — Retail entry di
+retest → bank ambil SL sebelum continuation</li>
+<li><strong>Trendline Liquidity</strong> — Retail entry di retest
+trendline → bank manipulasi breakout</li>
+<li><strong>Breakout Liquidity</strong> — Retail taruh buy/sell stop di
+breakout → bank ambil stop order lalu reverse</li>
+</ol>
+<h3 id="sudut-pandang-liquidity">Sudut Pandang Liquidity</h3>
+<ul>
+<li>Buy DI BAWAH support, Sell DI ATAS resistance</li>
+<li>Cari POI SETELAH liquidity diambil</li>
+<li>Masuk ketika “MEREKA” sudah loss</li>
+</ul>
+<hr />
+<h2 id="inducement">4. INDUCEMENT</h2>
+<h3 id="apa-itu-inducement">Apa itu Inducement</h3>
+<ul>
+<li>Bank &amp; liquidity provider bisa LIHAT semua entry, SL, TP</li>
+<li>Strategi mainstream → bank manipulasi → ambil SL → lanjut arah</li>
+<li><strong>Fokus: dimana SL mayoritas trader &amp; dimana mereka akan
+loss</strong></li>
+</ul>
+<h3 id="inducement-purpose">Inducement Purpose</h3>
+<ul>
+<li><strong>Psychological:</strong> FOMO, HOPE, FEAR, GREED</li>
+<li><strong>Analytical:</strong> Buat trader masuk duluan, tahan posisi
+lebih lama, percaya reversal palsu</li>
+</ul>
+<h3 id="inducement-type-1-trend-baru-reversal-trap">Inducement Type 1:
+Trend Baru (Reversal Trap)</h3>
+<ul>
+<li>Market maker kasih reversal FEAR ke holder &amp; HOPE ke trader yang
+terlalu cepat masuk</li>
+<li>Terjadi di fake Order Block</li>
+<li><strong>Buy di bawah Higher Low / Sell di atas Lower
+High</strong></li>
+</ul>
+<h3 id="inducement-type-2-continuation-trap">Inducement Type 2:
+Continuation Trap</h3>
+<ul>
+<li>Trader terjebak LTF internal structure, lupa HTF external
+structure</li>
+<li>Terjadi di SMT</li>
+<li><strong>Buy di bawah Lower Low / Sell di atas Higher
+High</strong></li>
+</ul>
+<h3 id="inducement-levels">Inducement Levels</h3>
+<ul>
+<li><strong>Major:</strong> HTF liquidity (H4-D-W-M), PWH/PWL,
+PML/PMH</li>
+<li><strong>Medium:</strong> Intraday TF (M15-H2), PDH/PDL, session
+highs/lows, Asian H/L</li>
+<li><strong>Minor:</strong> Intraday internal (M1-M15), sideway H/L →
+untuk entry</li>
+</ul>
+<h3 id="inducement-cycle">Inducement Cycle</h3>
+<ul>
+<li>Build-up → Trap → Reverse</li>
+<li>Build-up: harga masuk range, buat trendline/breakout palsu</li>
+<li>Trap: terjadi di jam tertentu (news, London/NY session)</li>
+<li><strong>Semakin besar inducement → semakin besar
+pergerakan</strong></li>
+</ul>
+<hr />
+<h2 id="smart-money-concept-smc">5. SMART MONEY CONCEPT (SMC)</h2>
+<h3 id="impulsive-corrective">Impulsive &amp; Corrective</h3>
+<ul>
+<li><strong>Impulsive:</strong> momentum kuat, ketidakseimbangan
+harga</li>
+<li><strong>Corrective:</strong> kebalikan impulsive, TIDAK BOLEH
+melebihi panjang impulsive</li>
+</ul>
+<h3 id="valid-pullback">Valid Pullback</h3>
+<ul>
+<li>Harga break high/low candle sebelumnya (close candle, bukan
+wick)</li>
+<li>Valid pullback → tentukan liquidity &amp; OB untuk entry</li>
+</ul>
+<h3 id="market-structure-mapping">Market Structure Mapping</h3>
+<ul>
+<li><strong>BoS (Break of Structure):</strong> Valid jika close candle
+di atas/below last high/low. Wick only = liquidity sweep, BUKAN BoS
+valid</li>
+<li><strong>CHoCH (Change of Character):</strong> Perubahan trend
+pertama, valid sama seperti BoS</li>
+</ul>
+<h3 id="imbalance-fair-value-gap-fvg">Imbalance / Fair Value Gap
+(FVG)</h3>
+<ul>
+<li>Harga naik/turun tajam → meninggalkan ketidakseimbangan → harga
+pullback untuk isi FVG</li>
+<li>Digunakan untuk <strong>POI (Point of Interest)</strong> dan
+<strong>Order Block Marking</strong></li>
+</ul>
+<h3 id="order-flow">Order Flow</h3>
+<ul>
+<li><strong>Bearish Order Flow:</strong> gerakan pembelian terakhir
+sebelum drop</li>
+<li><strong>Bullish Order Flow:</strong> gerakan penjualan terakhir
+sebelum rally</li>
+</ul>
+<h3 id="order-block-smc-version">Order Block (SMC version)</h3>
+<ul>
+<li>Syarat: HARUS ada imbalance pada candle + candle OB harus ambil
+high/low candle sebelumnya + HARUS BOS</li>
+<li>Warna candle TIDAK berpengaruh → keduanya valid jika syarat
+terpenuhi</li>
+<li>Harga umumnya bereaksi di OB (mitigation play)</li>
+<li>OB = footprint institusi, bukan pattern random</li>
+</ul>
+<h3 id="retail-liquidity-smc-view">Retail Liquidity (SMC view)</h3>
+<ul>
+<li>Retail pakai: trendline, indicator, S/R → bank manipulasi pola
+ini</li>
+<li>Equal Highs/Lows, Trendline = target bank untuk ambil SL</li>
+</ul>
+<hr />
+<h2 id="elliot-wave-theory">6. ELLIOT WAVE THEORY</h2>
+<h3 id="dasar-turunan-dow-theory">Dasar (Turunan Dow Theory)</h3>
+<ul>
+<li>Primary trend = THE WAVE (bullish/bearish)</li>
+<li>Secondary trend = counter reaction</li>
+<li>Minor trend = subdivisi</li>
+</ul>
+<h3 id="gerakan-utama">2 Gerakan Utama</h3>
+<ol type="1">
+<li><strong>Impulsive Wave</strong> — 5 wave (1-2-3-4-5), searah trend
+utama</li>
+<li><strong>Corrective Wave</strong> — 3 wave (A-B-C), melawan trend
+utama</li>
+</ol>
+<h3 id="impulsive-wave-unbreakable-rules">Impulsive Wave — UNBREAKABLE
+RULES</h3>
+<ul>
+<li>Wave 2 TIDAK BOLEH lebih rendah dari wave 1</li>
+<li>Wave 3 TIDAK BOLEH menjadi yang terpendek</li>
+<li>Wave 4 TIDAK BOLEH overlap ke wave 1</li>
+<li>Jika salah satu dilanggar → BUKAN impulsive wave</li>
+</ul>
+<h3 id="wave-detail">Wave Detail</h3>
+<ul>
+<li><strong>Wave 1:</strong> 5 gerakan minor di dalamnya. Lebih besar
+waktu &amp; harga dari corrective swing sebelumnya.</li>
+<li><strong>Wave 3:</strong> Tidak boleh terpendek. Minimal 100% range
+wave 1. Jika &gt; 100% → minimal 162%, bisa extend ke 262%.</li>
+<li><strong>Wave 5:</strong> Stop di 100% range wave 1 (jika wave 3
+extend). Atau 62%-162% dari wave 1.</li>
+</ul>
+<h3 id="corrective-wave-abc">Corrective Wave (ABC)</h3>
+<ul>
+<li>3 gerakan minor, melawan trend utama</li>
+<li><strong>ABC Zigzag:</strong> 5-3-5</li>
+<li><strong>ABC Flat:</strong> 3-3-5 (regular &amp; irregular)</li>
+<li><strong>Triangle ABCDE:</strong> 3-3-3-3 (complex)</li>
+</ul>
+<hr />
+<h2 id="the-magic-of-fibonacci">7. THE MAGIC OF FIBONACCI</h2>
+<h3 id="golden-ratio">Golden Ratio</h3>
+<ul>
+<li>Deret: 0,1,1,2,3,5,8,13,21,34,55,89…</li>
+<li>89/144 = 0.618 = <strong>GOLDEN RATIO</strong></li>
+<li>Harmony Ratio: 0.618 dan 1.618</li>
+</ul>
+<h3 id="fibonacci-sebagai-ma-parameter">Fibonacci sebagai MA
+Parameter</h3>
+<ul>
+<li>Angka Fibonacci sebagai MA period: 13, 21, 34, 55, 89 → respon
+sangat baik terhadap harga</li>
+</ul>
+<h3 id="basic-patterns">Basic Patterns</h3>
+<ul>
+<li><strong>XAB, XAY, ABCD</strong> = dasar semua chart pattern</li>
+</ul>
+<h3 id="priority-ratios">Priority Ratios</h3>
+<ul>
+<li><strong>XAB:</strong> 0.382, 0.5, 0.618, 0.786</li>
+<li><strong>XAY:</strong> 1.618, 1.272, 2.24, 2.618</li>
+<li><strong>ABCD:</strong> 0.618, 1, 1.272, 1.618, 2.618</li>
+</ul>
+<h3 id="fibonacci-phases">Fibonacci Phases</h3>
+<ul>
+<li><strong>Accumulation:</strong> Internal retracement stop di 0.5 -
+0.618</li>
+<li><strong>Participation &amp; Distribution:</strong> Internal
+retracement stop di 0.382</li>
+<li><strong>Gagal trend:</strong> Gunakan 0.786 - 0.886</li>
+</ul>
+<h3 id="jenis-supportresistance">3 Jenis Support/Resistance</h3>
+<ol type="1">
+<li><strong>Classic S/R</strong> — sering fakeout</li>
+<li><strong>Dynamic S/R</strong> — sering fakeout</li>
+<li><strong>Harmonic S/R</strong> — gunakan ratio 1.272 untuk deteksi
+fakeout</li>
+</ol>
+<h3 id="fibonacci-price-cluster">Fibonacci Price Cluster</h3>
+<ul>
+<li>Area penting S/R yang punya kekuatan membalikkan harga</li>
+<li>Kombinasikan: Internal Retracement + External Retracement + Price
+Projection</li>
+<li>Ratio yang berdempetan/bertumpuk = area reversal kuat</li>
+</ul>
+<h3 id="advanced-harmonic-patterns">Advanced Harmonic Patterns</h3>
+<ul>
+<li><strong>Butterfly, Crab, Bat, Shark, Gartley</strong> — bisa trading
+2 arah</li>
+<li>Semua basic pattern (double top/bottom, pennant) mengandung ratio
+Fibonacci</li>
+</ul>
+<hr />
+<h2 id="candlestick-patterns-12-dasar">8. CANDLESTICK PATTERNS (12
+Dasar)</h2>
+<h3 id="bullish">Bullish</h3>
+<ol type="1">
+<li><strong>Marubozu Putih</strong> — full body tanpa sumbu, bullish
+kuat</li>
+<li><strong>Marubozu Putih Bersumbu</strong> — bullish, sedikit lebih
+lemah</li>
+<li><strong>Marubozu Putih Berekor</strong> — bullish lanjut</li>
+<li><strong>Spinning Top Putih</strong> — konsolidasi, sedikit
+bullish</li>
+</ol>
+<h3 id="bearish">Bearish</h3>
+<ol start="5" type="1">
+<li><strong>Marubozu Hitam</strong> — full body, bearish kuat</li>
+<li><strong>Marubozu Hitam Bersumbu</strong> — bearish</li>
+<li><strong>Marubozu Hitam Berekor</strong> — bearish lanjut</li>
+<li><strong>Spinning Top Hitam</strong> — konsolidasi, sedikit
+bearish</li>
+</ol>
+<h3 id="reversalindecision">Reversal/Indecision</h3>
+<ol start="9" type="1">
+<li><strong>Doji</strong> — open ≈ close, sinyal reversal</li>
+<li><strong>Gravestone Doji</strong> — uptrend → downtrend reversal</li>
+<li><strong>Dragonfly Doji</strong> — downtrend → uptrend reversal</li>
+<li><strong>Doji Bersumbu &amp; Berekor Panjang</strong> —
+ketidakseimbangan, perlu konfirmasi</li>
+</ol>
+<h3 id="reversal-patterns">Reversal Patterns</h3>
+<ul>
+<li><strong>Morning Star</strong> — bearish → bullish (hitam, doji,
+putih)</li>
+<li><strong>Evening Star</strong> — bullish → bearish</li>
+<li><strong>Hammer</strong> — bearish → bullish reversal</li>
+<li><strong>Inverted Hammer</strong> — bullish → bearish reversal</li>
+<li><strong>Hanging Man</strong> — bearish reversal di uptrend</li>
+</ul>
+<hr />
+<h2 id="risk-management-elder-non-negotiable">9. RISK MANAGEMENT (Elder
+— NON-NEGOTIABLE)</h2>
+<h3 id="user-override-2026-06-06">User Override (2026-06-06)</h3>
+<ul>
+<li><strong>Entry per trade:</strong> $1.00 (10% of $10 capital) — user
+chose fixed $1 instead of Elder’s 2%</li>
+<li><strong>Max positions:</strong> 2 (not Elder’s 3)</li>
+<li><strong>Min RR:</strong> 1:2.5 (raised from Elder’s implicit
+1:2)</li>
+<li><strong>Ideal RR:</strong> 1:2.8</li>
+<li>Full math: see
+<code>references/risk-management-10-account.md</code></li>
+</ul>
+<h3 id="two-percent-rule-shark-repellent-elders-original">Two Percent
+Rule — SHARK REPELLENT (Elder’s Original)</h3>
+<ul>
+<li><strong>MAX 2% equity per trade</strong> — ini HUKUM, bukan
+saran</li>
+<li>Contoh: $10,000 account → max risiko $200/trade</li>
+<li>Entry $100, SL $95 → risiko $5/unit → max 40 units</li>
+<li>“One disastrous loss can do to your account what a shark does to a
+swimmer”</li>
+<li>JANGAN PERNAH break rule ini, bahkan saat “yakin banget”</li>
+<li><strong>Note:</strong> For small accounts ($10), user may override
+to fixed amount (e.g. $1). The principle is: know your exact dollar risk
+before entry.</li>
+</ul>
+<h3 id="six-percent-rule-bulletproof">Six Percent Rule —
+BULLETPROOF</h3>
+<ul>
+<li>Total risiko SEMUA posisi terbuka + realized loss bulan ini ≤
+<strong>6% equity</strong></li>
+<li>Sudah 3 posisi × 2% = 6% → <strong>STOP, jangan buka posisi
+baru</strong></li>
+<li>Mau buka posisi baru? Close salah satu posisi dulu atau tighten
+stop</li>
+<li>Ini melindungi dari “death by thousand cuts”</li>
+</ul>
+<h3 id="position-sizing-formula">Position Sizing Formula</h3>
+<pre><code>Position Size = (Account Equity × 2%) / (Entry - Stop Loss)
+Contoh: ($10,000 × 2%) / ($100 - $95) = $200 / $5 = 40 units</code></pre>
+<h3 id="profit-targets-enough-is-the-power-word">Profit Targets —
+“Enough” Is the Power Word</h3>
+<ul>
+<li>Target 1: <strong>Moving averages</strong> (area value antara 2
+MA)</li>
+<li>Target 2: <strong>Channel lines</strong> (upper/lower envelope)</li>
+<li>Target 3: <strong>Support/resistance terdekat</strong></li>
+<li>“Rabbit hunting” (target kecil konsisten) &gt; “elephant hunting”
+(target besar jarang kena)</li>
+<li><strong>Partial close</strong>: 50% di TP1, sisanya trail ke
+TP2</li>
+</ul>
+<h3 id="how-to-set-stops">How to Set Stops</h3>
+<ul>
+<li>Stop = perlindungan dari “shark bite” loss</li>
+<li>Stop harus berdasarkan <strong>market structure</strong> (di bawah
+support, di atas resistance)</li>
+<li>Jangan set stop terlalu dekat (noise kena) atau terlalu jauh (risiko
+besar)</li>
+<li>Jangan pernah harap-harap (wishful thinking) saat set stop</li>
+<li><strong>“If you can’t define your risk, you can’t
+trade”</strong></li>
+</ul>
+<hr />
+<h2 id="multi-timeframe-system-elder-triple-screen-impulse">10.
+MULTI-TIMEFRAME SYSTEM (Elder — Triple Screen + Impulse)</h2>
+<h3 id="triple-screen-trading-system">Triple Screen Trading System</h3>
+<ul>
+<li><strong>Screen 1 — Timeframe besar</strong> (Weekly/Daily): arah
+trend utama. HANYA trade searah HTF</li>
+<li><strong>Screen 2 — Timeframe medium</strong> (4H/1H): cari entry
+point (counter-trend di dalam trend besar)</li>
+<li><strong>Screen 3 — Timeframe kecil</strong> (15m/5m): timing entry
+presisi</li>
+<li><strong>Rule: Trade searah trend besar, entry di pullback
+LTF</strong></li>
+</ul>
+<h3 id="impulse-system-13-ema-macd-histogram">Impulse System (13 EMA +
+MACD Histogram)</h3>
+<ul>
+<li><strong>GREEN</strong> (EMA naik + MACD-H naik) = bullish momentum →
+BOLEH LONG, JANGAN SHORT</li>
+<li><strong>RED</strong> (EMA turun + MACD-H turun) = bearish momentum →
+BOLEH SHORT, JANGAN LONG</li>
+<li><strong>BLUE</strong> (divergence EMA &amp; MACD-H) = momentum
+berubah → perhatikan reversal, boleh entry berlawanan</li>
+<li><strong>Cek di HTF (Daily/4H) dulu, baru LTF (1H/15m)</strong></li>
+<li>Jika HTF green + LTF green = HIGH CONVICTION long</li>
+<li>Jika HTF red + LTF green = HATI-HATI, kemungkinan hanya bounce</li>
+</ul>
+<h3 id="a-trade-concept-elder">A-Trade Concept (Elder)</h3>
+<ul>
+<li>“If you don’t know what your A-trade is, you have no business being
+in the market”</li>
+<li>A-trade = setup terbaik lo, positive expectation tinggi, sudah
+terbukti</li>
+<li><strong>HANYA trade A-trade</strong>. B-trade dan C-trade =
+skip</li>
+<li>Buy grade, sell trade grade = evaluasi kualitas eksekusi</li>
+<li>Boredom bukan alasan untuk masuk market</li>
+</ul>
+<hr />
+<h2 id="dow-theory-market-phases">11. DOW THEORY — MARKET PHASES</h2>
+<h3 id="three-movements">Three Movements</h3>
+<ol type="1">
+<li><strong>Primary</strong> (bull/bear market) → 1-3 tahun. Ini trend
+utama</li>
+<li><strong>Secondary</strong> (correction) → beberapa minggu/bulan,
+retracement 33-66%</li>
+<li><strong>Minor</strong> (daily fluctuation) → noise, jangan
+ditrade</li>
+</ol>
+<h3 id="three-phases-of-bull-market">Three Phases of Bull Market</h3>
+<ol type="1">
+<li><strong>Accumulation</strong> → smart money beli saat semua orang
+takut. Volume rendah, berita buruk</li>
+<li><strong>Public Participation</strong> → rally besar dimulai, berita
+mulai bagus, volume naik</li>
+<li><strong>Excess/Speculation</strong> → semua orang euforia, taxi
+driver kasih stock tips. SMART MONEY JUAL DISINI</li>
+</ol>
+<h3 id="three-phases-of-bear-market">Three Phases of Bear Market</h3>
+<ol type="1">
+<li><strong>Distribution</strong> → smart money jual di euforia. Volume
+tinggi tapi harga ga naik signifikan</li>
+<li><strong>Panic</strong> → harga jatuh cepat, volume spike besar,
+semua orang panik</li>
+<li><strong>Despair</strong> → semua orang kapok, berita buruk terus.
+SMART MONEY AKUMULASI DISINI</li>
+</ol>
+<h3 id="volume-confirmation">Volume Confirmation</h3>
+<ul>
+<li>Volume naik saat harga naik = trend bullish VALID</li>
+<li>Volume turun saat harga naik = trend melemah, hati-hati
+reversal</li>
+<li>Volume spike besar di bottom = capitulation = potential
+reversal</li>
+<li>“Volume precedes price” — volume berubah dulu, harga menyusul</li>
+</ul>
+<hr />
+<h2 id="trading-psychology-elder-aziz-gabungan">12. TRADING PSYCHOLOGY
+(Elder + Aziz — Gabungan)</h2>
+<h3 id="success-cycle-elder">Success Cycle (Elder)</h3>
+<p><strong>Money — Mind — Method</strong> (ketiganya seimbang, salah
+satu lemah = system failure)</p>
+<h3 id="deadly-sins-of-trading-aziz">7 Deadly Sins of Trading
+(Aziz)</h3>
+<ol type="1">
+<li><strong>Averaging Down</strong> → menambah posisi saat loss. BAHAYA.
+“Turning a bad trade into a worse one”</li>
+<li><strong>Turning Day Trade jadi Swing Trade</strong> → “I’ll just
+hold it longer” = bencana. Stick to plan</li>
+<li><strong>Blowing Up Account</strong> → satu trade merusak semua.
+Biasanya position sizing terlalu besar</li>
+<li><strong>Overtrading</strong> = “Crack Addict Trading Syndrome”.
+Limit trade per hari</li>
+<li><strong>Revenge Trading</strong> → loss → langsung balas dendam →
+loss lebih besar spiral</li>
+<li><strong>Trading for Money</strong> → fokus profit = stress. Fokus
+proses = profit datang sendiri</li>
+<li><strong>FOMO</strong> → masuk di harga salah karena takut
+ketinggalan. Market selalu ada besok</li>
+</ol>
+<h3 id="circuit-breakers-aziz">Circuit Breakers (Aziz)</h3>
+<ul>
+<li><strong>2x loss berturut = STOP trading hari itu</strong></li>
+<li><strong>Daily profit target tercapai = STOP trading hari
+itu</strong></li>
+<li><strong>3x loss dalam seminggu = review journal, cuti 1
+hari</strong></li>
+<li>Jangan pernah trading untuk “balas dendam” loss</li>
+</ul>
+<h3 id="psychology-safeguards-aziz">Psychology Safeguards (Aziz)</h3>
+<ul>
+<li><strong>Know who’s behind the price</strong> → setiap harga ada
+pembeli dan penjual. Siapa mereka? (retail vs institutional)</li>
+<li><strong>Establish clear rules</strong> → tulis rules, tempel di
+layar. Rules &gt; feelings SELALU</li>
+<li><strong>Self-reflection</strong> → review diri setiap minggu. Apa
+yang bisa diperbaiki?</li>
+<li><strong>Follow no one</strong> → jangan ikut-ikutan. Punya analisis
+sendiri</li>
+</ul>
+<h3 id="process-over-pl-aziz">Process Over P&amp;L (Aziz)</h3>
+<ul>
+<li>Jangan liat profit/loss real-time → bikin emosi</li>
+<li>Lihat apakah lo execute plan dengan benar</li>
+<li>Build TradeBooks → dokumentasi setup yang terbukti works</li>
+<li>Focus on few stocks/pairs → lebih baik kenal 5 pair dalam-dalam
+daripada 50 dangkal</li>
+</ul>
+<h3 id="mindset-trader-profesional">Mindset Trader Profesional</h3>
+<ul>
+<li>Orientasi PROSES, bukan hasil</li>
+<li>“Trader baik = cepat akui kesalahan” — George Soros</li>
+<li>“If you can’t sleep at night, your position is too large”</li>
+<li>Trading = marathon, bukan sprint. Konsistensi &gt; home run</li>
+</ul>
+<h3 id="teknik-terlarang">Teknik TERLARANG</h3>
+<ol type="1">
+<li>Mengejar harga running (FOMO entry)</li>
+<li>Trading sideway tanpa range jelas</li>
+<li>Terlalu andalkan indicator (no context)</li>
+<li>Martingale / averaging down membabi buta</li>
+<li>Trading by news tanpa plan</li>
+<li>Over-leverage karena “yakin”</li>
+</ol>
+<hr />
+<h2 id="trade-journal-daily-routine">13. TRADE JOURNAL &amp; DAILY
+ROUTINE</h2>
+<h3 id="daily-homework-wajib-sebelum-trading">Daily Homework (Wajib
+Sebelum Trading)</h3>
+<ol type="1">
+<li><strong>Scan pasar</strong> → identifikasi candidates, update
+watchlist</li>
+<li><strong>Triple screen check</strong> → HTF trend, LTF entry
+zones</li>
+<li><strong>Impulse system</strong> → mark green/red/blue di chart
+lo</li>
+<li><strong>Set alert</strong> di level-level kunci (S/R, OB, FVG)</li>
+<li><strong>Identifikasi A-trade</strong> → cuma trade yang memenuhi
+SEMUA kriteria</li>
+</ol>
+<h3 id="multi-pair-scanning">Multi-Pair Scanning</h3>
+<p>For automated multi-pair scanning and auto-monitoring workflows, see
+<code>references/multi-pair-scanning.md</code>.</p>
+<h3 id="automated-scanning-pitfalls">Automated Scanning Pitfalls</h3>
+<ul>
+<li><strong>Score capping</strong>: Analysis scores can exceed 100 when
+multiple modules fire. Always cap at 100.</li>
+<li><strong>Direction filtering</strong>: NEUTRAL direction (ranging
+market) shouldn’t be traded. Filter out coins without clear LONG/SHORT
+bias.</li>
+<li><strong>Minimum score threshold</strong>: Use 60/100 as minimum for
+valid entry. Below that = low conviction.</li>
+<li><strong>Direction requirement</strong>: Valid entry REQUIRES clear
+direction (LONG or SHORT). NEUTRAL = skip.</li>
+<li><strong>Binance for data, CEX for execution</strong>: Binance OHLCV
+API is more reliable for analysis. Use target CEX (Bitget, etc.) for
+order execution only.</li>
+<li><strong>Rate limiting</strong>: Scanning 32+ coins needs delays
+(0.3-0.5s between API calls).</li>
+<li><strong>Auto TP/SL on entry</strong>: NEVER skip setting TP/SL
+immediately after entry. Position without protection = gambling.</li>
+<li><strong>Contract size rounding</strong>: Small accounts ($10) may
+round to 0 contracts for expensive coins (BTC). Focus on coins
+&lt;$100.</li>
+</ul>
+<h3 id="trade-record-format">Trade Record Format</h3>
+<pre><code>[DATE] [PAIR] [LONG/SHORT]
+Entry: $X | SL: $X | TP1: $X | TP2: $X
+Risk: $X (X% equity) | RR: X:1
+A-Trade? [Y/N] | Triple Screen: [HTF bias] + [LTF entry]
+Impulse: [Green/Red/Blue]
+Outcome: [Win/Loss/Breakeven] | P&amp;L: $X
+Grade: [A/B/C] — apakah eksekusi sesuai plan?
+Emosi: [Tenang/Takut/Serakah/FOMO/Revenge]
+Lesson: [apa yang bisa diperbaiki?]</code></pre>
+<h3 id="weekly-review">Weekly Review</h3>
+<ul>
+<li>Hitung win rate, average RR, expectancy</li>
+<li>Identifikasi pattern: kapan paling sering loss? Setup apa yang
+paling profitable?</li>
+<li>Review grade rata-rata → target improvement</li>
+<li>Apakah circuit breaker pernah terpicu? Kenapa?</li>
+</ul>
+<h3 id="teknik-terlarang-1">Teknik TERLARANG</h3>
+<ol type="1">
+<li>Mengejar harga running</li>
+<li>Trading sideway</li>
+<li>Terlalu andalkan indicator</li>
+<li>Martingale</li>
+<li>Trading by news</li>
+<li>Trading di timeframe kecil</li>
+</ol>
+<hr />
+<h2 id="scalping-techniques">14. SCALPING TECHNIQUES</h2>
+<h3 id="teknik-ma-crossover-scalping-m1m5m15">Teknik MA Crossover
+Scalping (M1/M5/M15)</h3>
+<p><strong>Indicators:</strong> Bollinger Band (BB), Moving Average
+(MA), MACD</p>
+<ul>
+<li><strong>BB</strong> = pagar/SNR sederhana. Candle sentuh top BB
+gagal tembus → kemungkinan turun ke low BB (dan sebaliknya)</li>
+<li><strong>MA1 &amp; MA5</strong> = entry trigger. Persilangan MA1
+&amp; MA5 = signal buy/sell</li>
+<li><strong>MA14</strong> = trend separator. MA14 di bawah MA1/MA5/MACD
+= Uptrend. Di atas = Downtrend</li>
+<li><strong>MACD</strong> = konfirmasi tambahan saat MA bersilang</li>
+</ul>
+<p><strong>Entry Rules:</strong> - MA1 di paling bawah semua MA → cari
+BUY - MA1 di paling atas semua MA → cari SELL - MA bersilang di beberapa
+TF = bonus konfirmasi - TP: 5-10 pips (50-100 point 5 decimal) - SL:
+20-30 pips atau manual cut loss jika reverse</p>
+<h3 id="price-action-scalper-4-screen-system">Price Action Scalper
+(4-Screen System)</h3>
+<ul>
+<li><strong>No indicators</strong> — pure price action</li>
+<li>4 layar: H1, M5, M15, M30</li>
+<li>Signal hampir setiap jam</li>
+<li>Berbasis trend confirmation dari multi-timeframe</li>
+<li>Cocok untuk scalping &amp; day trading</li>
+</ul>
+<hr />
+<h2 id="fibonacci-trading-praktis---fibo-derhaka">15. FIBONACCI TRADING
+(Praktis - Fibo Derhaka)</h2>
+<h3 id="fibonacci-retracement-levels">Fibonacci Retracement Levels</h3>
+<p><strong>0.236, 0.382, 0.500, 0.618, 0.764</strong></p>
+<h3 id="fibonacci-extension-levels">Fibonacci Extension Levels</h3>
+<p><strong>0, 0.382, 0.618, 1.000, 1.382, 1.618</strong></p>
+<h3 id="cara-pakai">Cara Pakai</h3>
+<ol type="1">
+<li><strong>Uptrend:</strong> Klik Swing Low → drag ke Swing High. Cari
+BUY di retracement levels</li>
+<li><strong>Downtrend:</strong> Klik Swing High → drag ke Swing Low.
+Cari SELL di retracement levels</li>
+<li>Level fib = zona support/resistance potensial (“KAWASAN
+PEMBUNUHAN”)</li>
+<li>Self-fulfilling: banyak trader pakai level yang sama → level jadi
+kuat</li>
+</ol>
+<h3 id="swing-highlow-definition">Swing High/Low Definition</h3>
+<ul>
+<li><strong>Swing High:</strong> candle dengan minimal 2 higher lows di
+kiri &amp; kanan</li>
+<li><strong>Swing Low:</strong> candle dengan minimal 2 lower highs di
+kiri &amp; kanan</li>
+</ul>
+<hr />
+<h2 id="kamus-candlestick-lengkap-89-pola">16. KAMUS CANDLESTICK LENGKAP
+(89 Pola)</h2>
+<h3 id="level-1-paling-reliabel-jarang-perlu-konfirmasi">Level 1 (Paling
+Reliabel, jarang perlu konfirmasi)</h3>
+<ul>
+<li><strong>Evening Star</strong> — Bullish→Bearish (bullish panjang,
+short body gap up, bearish panjang)</li>
+<li><strong>Morning Star</strong> — Bearish→Bullish (bearish panjang,
+short body gap down, bullish panjang)</li>
+<li><strong>Bearish/Bullish Abandoned Baby</strong> — Seperti star tapi
+dengan doji di tengah + gap di kedua sisi</li>
+<li><strong>Bearish/Bullish Tri Star</strong> — 3 doji beruntun dengan
+gap, probabilitas tinggi</li>
+<li><strong>Bearish/Bullish Engulfing</strong> — candle kedua full body
+menelan candle pertama</li>
+<li><strong>Dark Cloud Cover</strong> — Bearish: buka di atas high,
+tutup di bawah 50% bullish candle sebelumnya</li>
+<li><strong>Piercing Line</strong> — Bullish: buka di bawah low, tutup
+di atas 50% bearish candle sebelumnya</li>
+<li><strong>Bearish/Bullish Kicker</strong> — Gap + arah berlawanan,
+signal kuat</li>
+</ul>
+<h3 id="level-2">Level 2</h3>
+<ul>
+<li><strong>Shooting Star / Inverted Hammer</strong> — Long upper
+shadow, small body di bawah</li>
+<li><strong>Hammer</strong> — Long lower shadow, small body di atas</li>
+<li><strong>Short Dusk Line / Long Dawn Line</strong></li>
+<li><strong>Bearish/Bullish Meeting Lines</strong> — dua candle beda
+warna, close sama</li>
+<li><strong>Three Inside Down/Up</strong> — engulfing + konfirmasi
+candle ketiga</li>
+<li><strong>Three Outside Down/Up</strong> — engulfing +
+continuation</li>
+<li><strong>Bearish/Bullish Breakaway</strong> — 5 candle, gap + 3 small
++ breakaway</li>
+</ul>
+<h3 id="level-3">Level 3</h3>
+<ul>
+<li><strong>Bearish/Bullish Rickshawman</strong> — Doji dengan shadow
+sangat panjang</li>
+<li><strong>Bearish/Bullish Belt Hold</strong> — Marubozu yang muncul
+berlawanan trend</li>
+<li><strong>Two Crows / Upside Gap Two Crows</strong></li>
+<li><strong>Deliberation / Advance Block</strong> — 3 bullish tapi
+momentum melemah</li>
+<li><strong>Homing Pigeon / Matching Low</strong></li>
+</ul>
+<h3 id="level-4">Level 4</h3>
+<ul>
+<li><strong>Three Black Crows</strong> — 3 bearish berturut-turut, high
+&lt; high sebelumnya</li>
+<li><strong>Three Identical Crows</strong> — 3 bearish sama panjang</li>
+<li><strong>Three White Soldiers</strong> — 3 bullish
+berturut-turut</li>
+<li><strong>Concealing Baby Swallow / Ladder Bottom / Stick
+Sandwich</strong></li>
+<li><strong>Unique Three River Bottom / Three Star in
+South</strong></li>
+</ul>
+<h3 id="continuation-patterns">Continuation Patterns</h3>
+<ul>
+<li><strong>Upside Gap Three Method, Sides-by-Sides White
+Lines</strong></li>
+<li><strong>Upside/Downside Tasuki Gap</strong></li>
+<li><strong>Three-Line Strike, On/In Neck Line, Thrusting</strong></li>
+<li><strong>Falling/Rising Three Method, Mat Hold</strong></li>
+</ul>
+<h3 id="consolidation-patterns">Consolidation Patterns</h3>
+<ul>
+<li><strong>Bearish/Bullish Harami</strong> — kecil di dalam besar</li>
+<li><strong>Bearish/Bullish Doji</strong></li>
+<li><strong>Hanging Man / Inverted Hammer</strong></li>
+<li><strong>Bearish/Bullish Stalled Pattern</strong></li>
+</ul>
+<h3 id="psikologi-candlestick">Psikologi Candlestick</h3>
+<ul>
+<li><strong>Long Candle</strong> = momentum kuat (buyer/seller
+dominan)</li>
+<li><strong>Short Candle</strong> = kesepakatan harga, konsolidasi</li>
+<li><strong>Doji</strong> = kebingungan pasar, potensi reversal</li>
+<li><strong>Long Upper Shadow</strong> = buyer gagal naikkan harga</li>
+<li><strong>Long Lower Shadow</strong> = seller gagal turunkan
+harga</li>
+<li><strong>Gap</strong> = body gap (open/close tidak overlap) dalam
+candlestick context</li>
+<li>Reliabilitas rata-rata pola candlestick ≈ 50%, WAJIB konfirmasi</li>
+</ul>
+<hr />
+<h2 id="entrytpsl-format-wajib-di-akhir-setiap-analisis">17. ENTRY/TP/SL
+FORMAT (WAJIB di akhir setiap analisis)</h2>
+<p>Setiap analisis HARUS diakhiri dengan format ini:</p>
+<h3 id="long-setup">📌 LONG SETUP</h3>
+<ul>
+<li><strong>Entry:</strong> $X (harga masuk buy)</li>
+<li><strong>TP1:</strong> $X (take profit 1 — partial close 50%)</li>
+<li><strong>TP2:</strong> $X (take profit 2 — sisanya)</li>
+<li><strong>SL:</strong> $X (stop loss)</li>
+<li><strong>RR:</strong> X:1 (risk-to-reward ratio)</li>
+<li><strong>Trigger:</strong> [apa yang harus terjadi sebelum
+entry]</li>
+</ul>
+<h3 id="short-setup">📌 SHORT SETUP</h3>
+<ul>
+<li><strong>Entry:</strong> $X (harga masuk sell)</li>
+<li><strong>TP1:</strong> $X (take profit 1 — partial close 50%)</li>
+<li><strong>TP2:</strong> $X (take profit 2 — sisanya)</li>
+<li><strong>SL:</strong> $X (stop loss)</li>
+<li><strong>RR:</strong> X:1 (risk-to-reward ratio)</li>
+<li><strong>Trigger:</strong> [apa yang harus terjadi sebelum
+entry]</li>
+</ul>
+<h3 id="rules-entrytpsl">Rules Entry/TP/SL:</h3>
+<ul>
+<li>Entry harus di zona (OB, FVG, S/D) — BUKAN di tengah nowhere</li>
+<li>TP1 harus di liquidity level / resistance terdekat</li>
+<li>TP2 di major liquidity / S/R level berikutnya</li>
+<li>SL di luar zona (di bawah OB bullish / di atas OB bearish)</li>
+<li><strong>Minimal RR 1:2.5, ideal 1:2.8</strong> (user preference,
+2026-06-06)</li>
+<li>Selalu kasih TRIGGER (apa kondisi yang harus terjadi sebelum entry
+valid)</li>
+</ul>
+<hr />
+<h2 id="multi-pair-scanning-auto-trading">14. MULTI-PAIR SCANNING &amp;
+AUTO-TRADING</h2>
+<h3 id="scan-workflow-when-user-asks-cari-coin-bagus-scan-pairs">Scan
+Workflow (when user asks “cari coin bagus” / “scan pairs”)</h3>
+<ol type="1">
+<li><strong>Define pair universe</strong> — majors (BTC, ETH, SOL) +
+mid-caps (SUI, ARB, OP, AVAX, NEAR, APT, INJ, TIA, SEI, LINK, DOT) +
+memes (DOGE, PEPE, WIF) + trending</li>
+<li><strong>Fetch data</strong> — Bitget ticker (price, 24h change) +
+Binance OHLCV (1H × 30, 15m × 20)</li>
+<li><strong>Score each pair</strong> on:
+<ul>
+<li>Market structure (HH+HL = +15, LH+LL = +5, ranging = +10)</li>
+<li>Impulse system (GREEN = +10, BLUE = +5, RED = 0)</li>
+<li>Fibonacci position (deep pullback 23-38% = +15, OTE 38-50% = +12,
+mid = +8)</li>
+<li>Volume (spike &gt;1.5x = +8, &gt;1.2x = +4)</li>
+<li>OB/FVG confluence (in zone = +10/+8)</li>
+<li>Range % for scalping (&gt;5% = +5)</li>
+<li>Oversold bounce (24h change &lt;-8% = +8, &lt;-5% = +4)</li>
+<li>EMA alignment (bull aligned = +5)</li>
+</ul></li>
+<li><strong>Sort by score</strong>, analyze top 5 in detail</li>
+<li><strong>DEEP ANALYSIS</strong> — Run full 8-criteria analysis
+(Structure, Fib, OB, FVG, Liquidity, Impulse, Volume, Dow Theory) on top
+candidates</li>
+<li><strong>PRESENT TO USER</strong> — Show analysis results with
+LONG/SHORT setups (Entry/SL/TP/RR)</li>
+<li><strong>WAIT FOR APPROVAL</strong> — Do NOT place orders until user
+confirms. User said: “rules sebelum kamu entry / order kamu analisa dulu
+😭”</li>
+<li><strong>Entry decision</strong> — only enter if: in OB/FVG zone +
+reversal signal + RR ≥ 1:2.5 + impulse aligned</li>
+</ol>
+<p><strong>⚠️ HARD RULE: Scan → Deep Analysis → Present → User Approval
+→ Order. NEVER skip steps 5-7.</strong></p>
+<p>This rule was added after a session where orders were placed directly
+from scan scores without deep analysis, resulting in 3 counter-trend
+LONG trades while impulse was RED on all timeframes — a direct violation
+of Elder’s impulse system rules.</p>
+<h3 id="auto-monitor-pattern-background-execution">Auto-Monitor Pattern
+(background execution)</h3>
+<p>When user says “langsung masuk” / “auto entry”:</p>
+<ol type="1">
+<li>Create monitoring script at
+<code>~/bitget-trading/auto_monitor.py</code></li>
+<li>Config: entry zone, SL, TP1/TP2/TP3, risk %, leverage</li>
+<li>Monitor loop: check price every 2 minutes</li>
+<li>Entry conditions:
+<ul>
+<li>Price in zone + reversal signal (EMA cross / bullish candle / volume
+bounce)</li>
+<li>OR breakout above resistance level</li>
+</ul></li>
+<li>Auto-execute: market order → set TP/SL → save state → notify</li>
+<li>Run in background:
+<code>terminal(background=true, watch_patterns=["✅ ORDER FILLED", "❌ ORDER FAILED"])</code></li>
+</ol>
+<h3 id="position-management-rules-from-elder">Position Management Rules
+(from Elder)</h3>
+<ul>
+<li><strong>6% Rule</strong>: max 3 concurrent positions at 2% risk each
+with $10 account</li>
+<li><strong>Kill monitor</strong> when max positions reached (prevent
+over-trading)</li>
+<li><strong>Always set TP/SL</strong> immediately after entry</li>
+<li><strong>Partial close</strong>: 50% at TP1, trail rest to
+TP2/TP3</li>
+</ul>
+<h2 id="full-scanner-architecture-11-modules">Full Scanner Architecture
+(11 Modules)</h2>
+<p>When building an automated scanner, implement ALL these analysis
+modules:</p>
+<ol type="1">
+<li><strong>Market Structure</strong> — Swing Highs/Lows detection,
+HH+HL (bullish) vs LH+LL (bearish), BMS (Break Market Structure)</li>
+<li><strong>Supply &amp; Demand</strong> — RBR, RBD, DBR, DBD zone
+detection (base candle = range &lt; 50% of avg range)</li>
+<li><strong>Order Blocks</strong> — Last opposite candle before impulse
+move (&gt;2x avg body), must cause BMS</li>
+<li><strong>Fair Value Gap</strong> — Gap between candle[i-2].high and
+candle[i].low (bullish) or candle[i].high and candle[i-2].low
+(bearish)</li>
+<li><strong>Liquidity</strong> — Equal highs/lows within 0.5% tolerance
+across 10 candles = BSL/SSL zones</li>
+<li><strong>Fibonacci</strong> — OTE zone (0.382-0.618 retracement), 50%
+level</li>
+<li><strong>Impulse System (Elder)</strong> — 13 EMA slope + MACD
+histogram slope → GREEN/RED/BLUE. Check 1H AND 4H</li>
+<li><strong>Candlestick Patterns</strong> — Engulfing, Hammer, Shooting
+Star, Doji, Morning/Evening Star, Three White Soldiers/Black Crows</li>
+<li><strong>Volume</strong> — Spike detection (&gt;1.5x 20-period avg),
+volume trend (5-period vs 10-period)</li>
+<li><strong>RSI + MACD</strong> — Overbought/oversold, divergence,
+crossover</li>
+<li><strong>AMD Cycle</strong> — Accumulation (tight range &lt;60% of
+prior range), breakout detection</li>
+</ol>
+<p><strong>Scoring</strong>: Each module contributes points. Minimum
+60/100 for valid entry. Direction MUST be clear (long/short) — reject
+neutral.</p>
+<p><strong>Data source</strong>: Binance public API for OHLCV (more
+reliable than exchange-specific), Bitget for execution only.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Binance OHLCV fetch</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>klines <span class="op">=</span> requests.get(<span class="st">&#39;https://api.binance.com/api/v3/klines&#39;</span>, params<span class="op">=</span>{</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;symbol&#39;</span>: <span class="st">&#39;SOLUSDT&#39;</span>, <span class="st">&#39;interval&#39;</span>: <span class="st">&#39;1h&#39;</span>, <span class="st">&#39;limit&#39;</span>: <span class="dv">100</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}).json()</span></code></pre></div>
+<h2 id="pitfalls">Pitfalls</h2>
+<ul>
+<li><strong>Don’t analyze without data</strong> — always fetch real
+OHLCV first, never guess prices</li>
+<li><strong>Counter-trend trades when impulse is RED</strong> — If HTF
+impulse is RED, LONG trades are counter-trend = low probability. Even if
+RSI is oversold and volume shows exhaustion, the impulse system override
+applies. Only exception: confirmed BMS (Break of Structure) on 4H+ with
+GREEN impulse on 1H.</li>
+<li><strong>Bitget position mode</strong>: MUST set
+<code>one_way_mode</code> before orders (see cex-api-setup skill)</li>
+<li><strong>Credential format</strong>: Bitget uses
+<code>api_key</code>/<code>api_secret</code> (underscores), not
+camelCase. Handle both in code.</li>
+<li><strong>Bitget ticker endpoint</strong>: Direct API requires
+<code>productType=USDT-FUTURES</code> parameter</li>
+<li><strong>Binance OHLCV for analysis</strong>: Use Binance public API
+for chart data (more reliable), Bitget for execution</li>
+<li><strong>Counter-trend trades</strong>: When all structures are
+bearish, longs are counter-trend = lower conviction, tighter stops.
+NEVER enter against HTF impulse (RED = SHORT only, GREEN = LONG only).
+User explicitly corrected this — “rules sebelum kamu entry / order kamu
+analisa dulu 😭” (2026-06-06).</li>
+<li><strong>Small account ($10)</strong>: contract sizes may round to 0
+for expensive coins (BTC). Focus on coins &lt;$100.</li>
+<li><strong>Always present analysis before entry</strong>: Scan → Deep
+Analysis → Present to user → User approves → Order. NEVER skip the
+present/approve steps.</li>
+<li><strong>Credential redaction workaround</strong>: Hermes redacts
+<code>api_key</code>/<code>api_secret</code> strings in code. Use
+<code>creds_helper.py</code> pattern: create helper file that reads
+creds from JSON, import it. See
+<code>references/bitget-futures-api.md</code>.</li>
+<li><strong>Python background buffering</strong>: Always use
+<code>python3 -u</code> (unbuffered) for background monitoring scripts.
+Without <code>-u</code>, output is buffered and watch_patterns won’t
+trigger.</li>
+<li><strong>Existing positions check</strong>: Before starting
+auto-monitor, always check for existing open positions. Leftover
+positions from previous sessions can block new entries (max positions
+reached).</li>
+<li><strong><code>marginMode</code> in order body (CRITICAL —
+2026-06-06)</strong>: The <code>/api/v2/mix/order/place-order</code>
+endpoint REQUIRES <code>"marginMode": "crossed"</code> (or
+<code>"isolated"</code>) in the request body. Setting it via
+<code>/api/v2/mix/account/set-margin-mode</code> alone is NOT sufficient
+— the order returns
+<code>400172 "The margin mode cannot be empty"</code>. Always include
+marginMode in BOTH the set-margin-mode call AND the order body.</li>
+<li><strong>Minimum order quantity (CRITICAL — 2026-06-06)</strong>:
+Bitget enforces <code>minTradeNum</code> per symbol (usually 1
+contract). Query
+<code>/api/v2/mix/market/contracts?productType=USDT-FUTURES&amp;symbol=SYMBOL</code>
+to get exact minimum. For small accounts, qty must be INTEGER — use
+<code>str(int(max(round(qty), 1)))</code>. Decimal sizes like
+<code>0.9542</code> return
+<code>45111 "less than the minimum order quantity"</code>.</li>
+</ul>
+<h3 id="mandatory-workflow-user-rule-2026-06-06">MANDATORY Workflow
+(User Rule — 2026-06-06)</h3>
+<p><strong>NEVER skip directly from scan to order.</strong> This was a
+user correction.</p>
+<pre><code>1. Scan market (volatility, RR, trend)
+2. Deep Analysis (all 8 criteria below)
+3. **Present results to user** — show setups with Entry/SL/TP/RR
+4. **User approves** → then and only then place order</code></pre>
+<p>Exception: User explicitly says “langsung entry” → still do analysis,
+but can auto-enter if setup is valid.</p>
+<h3 id="analysis-workflow-when-analyzing-a-chart">Analysis Workflow
+(When Analyzing a Chart)</h3>
+<h3 id="mandatory-rule-analysis-before-entry">MANDATORY RULE: Analysis
+Before Entry</h3>
+<p>User explicitly corrected: “rules sebelum kamu entry kamu analisa
+dulu” (2026-06-06). NEVER skip deep analysis before placing orders. Even
+when user says “langsung entry” or “gas”, the analysis must happen
+FIRST. The workflow is ALWAYS:</p>
+<pre><code>Scan → Deep Analysis (8 components) → Present results → Entry</code></pre>
+<p>No shortcuts. No “I’ll analyze later”. No FOMO entry.</p>
+<p><strong>For Bitget Futures API commands and setup, see
+<code>references/bitget-futures-api.md</code></strong></p>
+<h3 id="step-1-gather-data">Step 1: Gather Data</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get OHLCV from Binance API (no auth needed)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests, json</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Daily data</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>klines <span class="op">=</span> requests.get(<span class="st">&#39;https://api.binance.com/api/v3/klines&#39;</span>, params<span class="op">=</span>{</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;symbol&#39;</span>: <span class="st">&#39;SOLUSDT&#39;</span>, <span class="st">&#39;interval&#39;</span>: <span class="st">&#39;1d&#39;</span>, <span class="st">&#39;limit&#39;</span>: <span class="dv">30</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>}).json()</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 4H data for structure analysis</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>klines_4h <span class="op">=</span> requests.get(<span class="st">&#39;https://api.binance.com/api/v3/klines&#39;</span>, params<span class="op">=</span>{</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;symbol&#39;</span>: <span class="st">&#39;SOLUSDT&#39;</span>, <span class="st">&#39;interval&#39;</span>: <span class="st">&#39;4h&#39;</span>, <span class="st">&#39;limit&#39;</span>: <span class="dv">50</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}).json()</span></code></pre></div>
+<h3 id="step-2-identify-market-structure">Step 2: Identify Market
+Structure</h3>
+<ul>
+<li>Find Swing Highs/Lows (candle higher/lower than 2 neighbors on each
+side)</li>
+<li>Map sequence: is it HH+HL (bullish) or LH+LL (bearish)?</li>
+<li>Count BMS (Break in Market Structure) occurrences</li>
+<li>Identify most recent BMS direction</li>
+</ul>
+<h3 id="step-3-mark-liquidity-pools">Step 3: Mark Liquidity Pools</h3>
+<ul>
+<li>Detect Equal Highs/Lows (within 0.5% tolerance across multiple
+candles)</li>
+<li>Cluster = major liquidity zone (BSL or SSL)</li>
+<li>Note which pools have been taken vs fresh</li>
+</ul>
+<h3 id="step-4-fibonacci">Step 4: Fibonacci</h3>
+<ul>
+<li>From HTF swing high to swing low (bearish) or low to high
+(bullish)</li>
+<li>Key levels: 23.6%, 38.2%, 50%, 61.8% (OTE)</li>
+<li>Where is current price relative to fib levels?</li>
+</ul>
+<h3 id="step-5-volume-analysis">Step 5: Volume Analysis</h3>
+<ul>
+<li>Compare daily volume to 5/10-day MA</li>
+<li>Volume spike + direction = conviction signal</li>
+<li>Low volume on bounce = weak, likely to fail</li>
+</ul>
+<h3 id="step-5.5-impulse-system-check-elder-mandatory">Step 5.5: Impulse
+System Check (Elder — MANDATORY)</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate 13 EMA + MACD Histogram</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ema(data, period):</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    k <span class="op">=</span> <span class="dv">2</span> <span class="op">/</span> (period <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> [data[<span class="dv">0</span>]]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(data)):</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        result.append(data[i] <span class="op">*</span> k <span class="op">+</span> result[<span class="op">-</span><span class="dv">1</span>] <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> k))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>ema13 <span class="op">=</span> ema(closes, <span class="dv">13</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>ema12 <span class="op">=</span> ema(closes, <span class="dv">12</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>ema26 <span class="op">=</span> ema(closes, <span class="dv">26</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>macd_line <span class="op">=</span> [ema12[i] <span class="op">-</span> ema26[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(closes))]</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>signal <span class="op">=</span> ema(macd_line, <span class="dv">9</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>macd_hist <span class="op">=</span> [macd_line[i] <span class="op">-</span> signal[i] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(closes))]</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine signal:</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="co"># GREEN: EMA13 slope &gt; 0 AND MACD-H slope &gt; 0 → LONG only</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co"># RED: EMA13 slope &lt; 0 AND MACD-H slope &lt; 0 → SHORT only</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># BLUE: divergence → watch for reversal</span></span></code></pre></div>
+<ul>
+<li><strong>Check on HTF (Daily/4H) FIRST, then LTF
+(1H/15m)</strong></li>
+<li>HTF RED + LTF GREEN = only a bounce, don’t long aggressively</li>
+<li>HTF GREEN + LTF GREEN = HIGH CONVICTION long</li>
+<li><strong>NEVER go against HTF impulse signal</strong></li>
+</ul>
+<h3 id="step-6-order-block-identification">Step 6: Order Block
+Identification</h3>
+<ul>
+<li>Bullish OB = last bearish candle before impulsive bullish move (BMS
+up)</li>
+<li>Bearish OB = last bullish candle before impulsive bearish move (BMS
+down)</li>
+<li>Mark OB zones on chart</li>
+</ul>
+<h3 id="step-7-select-setup">Step 7: Select Setup</h3>
+<ul>
+<li><strong>If trending:</strong> SH+BMS+RTO or SMS+BMS+RTO</li>
+<li><strong>If range/accumulation:</strong> AMD cycle (Accumulation →
+Manipulation → Distribution)</li>
+<li><strong>If liquidity sweep nearby:</strong> Turtle Soup (5-20 pip
+sweep + reverse)</li>
+</ul>
+<h3 id="step-8-output-format">Step 8: Output Format</h3>
+<p>Use this structure for analysis output:</p>
+<pre><code>📊 ANALISIS [PAIR] — [TF]
+
+Price: $X | Change: ±X% | 24h Range: $L-$H
+
+🔹 MARKET STRUCTURE — [Trend verdict] + swing sequence
+🔹 LIQUIDITY POOLS — BSL zones, SSL zones, equal highs/lows
+🔹 ORDER BLOCKS — Bullish OB, Bearish OB with price levels
+🔹 FIBONACCI — Retracement levels from swing H to L
+🔹 VOLUME — Spike analysis, MA comparison
+🔹 CANDLESTICK — Recent patterns (Doji, Marubozu, etc.)
+🔹 SCENARIO — Bearish setup (if X then Y) + Bullish setup (if X then Y)
+⚡ KESIMPULAN — Table summary + recommendation</code></pre>
+<p><strong>Step 9: STOP. Present to user. Wait for approval before
+placing any orders.</strong></p>
+<p>#See <code>references/ratakan-strategy.md</code> for small account
+trading framework ($10 modal, partial close, scanner integration).</p>
+<h2 id="pitfalls-1">Pitfalls</h2>
+<ul>
+<li><strong>Don’t analyze without data</strong> — always fetch real
+OHLCV first, never guess prices</li>
+<li><strong>Don’t call a trend reversal on one candle</strong> — need
+BMS confirmation (close above/below swing)</li>
+<li><strong>Don’t ignore HTF</strong> — LTF setup against HTF trend =
+lower probability</li>
+<li><strong>Don’t skip liquidity</strong> — equal highs/lows are the #1
+reason price moves to a zone</li>
+<li><strong>Volume matters</strong> — high volume on breakout = real,
+low volume = fakeout likely</li>
+<li><strong>Vision fallback</strong> — if vision model is down, use
+Binance API for data + OCR (pytesseract) for chart screenshots</li>
+<li><strong>Scanner scoring</strong> — 11 modules contribute to score,
+cap at 100. Min 60 for entry. Direction must be clear (LONG/SHORT),
+NEUTRAL = skip.</li>
+<li><strong>Auto entry preference</strong> — User wants NO confirmation
+when analysis is valid. Scanner auto-enters with TP/SL set
+immediately.</li>
+<li><strong>Scanner score alone is NOT enough</strong> — scanner using
+basic EMA/RSI/MACD gives score 0-10, but MUST do deep analysis
+(SMC/SnD/Fibonacci/OB/FVG/Liquidity/Impulse) before entry. Scanner is
+step 1 filter only.</li>
+<li><strong>Don’t move conversation to group without asking</strong> —
+user gets frustrated if you redirect chat elsewhere. Stay in current DM
+unless explicitly asked to move.</li>
+</ul>
+<hr />
+<h2 id="references">References</h2>
+<p>See <code>references/</code> for detailed knowledge banks: -
+<code>references/elder-triple-screen.md</code> — Triple Screen Trading
+System + Elliott Wave + Force Index -
+<code>references/aziz-day-trading.md</code> — Opening Range Breakouts +
+ADX + VWAP + Reversal Day Patterns -
+<code>references/dow-theory.md</code> — Dow’s 3 Trends, 3 Phases, Volume
+Confirmation, Averages Must Confirm -
+<code>references/auto-monitor-pattern.md</code> — Background price
+monitoring + auto-trade execution pattern (Bitget) -
+<code>references/auto-entry-monitor.md</code> — Auto-entry monitor:
+background process that enters trades when price hits pre-analyzed zones
+(verified working pattern with Bitget API v2 fixes) -
+<code>references/multi-pair-scanning.md</code> — Multi-pair scanning
+workflow - <code>references/binance-api-examples.md</code> — Binance API
+examples for OHLCV data -
+<code>references/deep-analysis-session-2026-06-06.md</code> — Reference
+deep analysis for NEAR/AVAX/ARB (8-criteria template + session results)
+- <code>references/risk-management-10-account.md</code> — Risk
+management math for $10 account (RR 1:2.5 min, scenarios, position
+sizing)</p>
+<hr />
+<h1
+id="section-2">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesrisk-management-10-account.md">FILE:
+references/risk-management-10-account.md</h1>
+<h1
+id="section-3">═══════════════════════════════════════════════════════</h1>
+<h1 id="risk-management-10-account-reference">Risk Management — $10
+Account Reference</h1>
+<h2 id="account-parameters-user-config-updated-2026-06-06">Account
+Parameters (User Config — Updated 2026-06-06)</h2>
+<ul>
+<li><strong>Capital:</strong> $10</li>
+<li><strong>Entry per trade:</strong> $1.00 (10% of capital) —
+<strong>user override, NOT Elder’s 2%</strong></li>
+<li><strong>Max positions:</strong> 2 (20% total capital allocated)</li>
+<li><strong>Leverage:</strong> 20x default</li>
+<li><strong>Min RR:</strong> 1:2.5</li>
+<li><strong>Ideal RR:</strong> 1:2.8</li>
+</ul>
+<p><strong>Note:</strong> Elder’s 2% rule ($0.20) was overridden by user
+to $1.00 per entry for small account viability. The actual RISK depends
+on SL distance × position size, not the margin amount. With 20x
+leverage, $1 margin = $20 notional. A 5% SL move = $1 loss (100% of
+margin). Adjust leverage/SL accordingly.</p>
+<h2 id="profitloss-per-trade-rr-12.5-1-margin">Profit/Loss Per Trade (RR
+1:2.5, $1 margin)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>RR</th>
+<th>Risk (margin)</th>
+<th>Reward (Win)</th>
+<th>Net</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1:2.5</td>
+<td>-$1.00</td>
+<td>+$2.50</td>
+<td>Win +$2.50 / Loss -$1.00</td>
+</tr>
+<tr class="even">
+<td>1:2.8</td>
+<td>-$1.00</td>
+<td>+$2.80</td>
+<td>Win +$2.80 / Loss -$1.00</td>
+</tr>
+</tbody>
+</table>
+<h2 id="trade-scenarios-rr-12.5">10-Trade Scenarios (RR 1:2.5)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Win Rate</th>
+<th>Wins</th>
+<th>Losses</th>
+<th>Net P/L</th>
+<th>Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>30%</td>
+<td>3</td>
+<td>7</td>
+<td>+$0.50</td>
+<td>$10.50</td>
+</tr>
+<tr class="even">
+<td>40%</td>
+<td>4</td>
+<td>6</td>
+<td>+$4.00</td>
+<td>$14.00</td>
+</tr>
+<tr class="odd">
+<td>50%</td>
+<td>5</td>
+<td>5</td>
+<td>+$7.50</td>
+<td>$17.50</td>
+</tr>
+</tbody>
+</table>
+<h2 id="trade-scenarios-rr-12.8">10-Trade Scenarios (RR 1:2.8)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Win Rate</th>
+<th>Wins</th>
+<th>Losses</th>
+<th>Net P/L</th>
+<th>Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>30%</td>
+<td>3</td>
+<td>7</td>
+<td>+$1.40</td>
+<td>$11.40</td>
+</tr>
+<tr class="even">
+<td>40%</td>
+<td>4</td>
+<td>6</td>
+<td>+$5.20</td>
+<td>$15.20</td>
+</tr>
+<tr class="odd">
+<td>50%</td>
+<td>5</td>
+<td>5</td>
+<td>+$9.00</td>
+<td>$19.00</td>
+</tr>
+</tbody>
+</table>
+<h2 id="breakeven-win-rate">Breakeven Win Rate</h2>
+<table>
+<thead>
+<tr class="header">
+<th>RR</th>
+<th>Breakeven</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1:2.5</td>
+<td>28.6%</td>
+<td>Only need to win 3/10 trades</td>
+</tr>
+<tr class="even">
+<td>1:2.8</td>
+<td>26.3%</td>
+<td>Only need to win 2.6/10 trades</td>
+</tr>
+</tbody>
+</table>
+<h2 id="max-drawdown-scenarios">Max Drawdown Scenarios</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Loss</th>
+<th>Balance</th>
+<th>Recovery</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2 SL hit together</td>
+<td>-$2.00</td>
+<td>$8.00</td>
+<td>1 win = $10.50 ✅</td>
+</tr>
+<tr class="even">
+<td>4 consecutive SL</td>
+<td>-$4.00</td>
+<td>$6.00</td>
+<td>2 wins = $11.00 ✅</td>
+</tr>
+<tr class="odd">
+<td>6 consecutive SL</td>
+<td>-$6.00</td>
+<td>$4.00</td>
+<td>3 wins = $11.50 ✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="position-sizing-formula-1">Position Sizing Formula</h2>
+<pre><code>Margin = $1.00 per trade (fixed)
+Leverage = 20x → Notional = $20
+Qty = Notional / Entry Price
+Risk = Qty × |Entry - SL|
+
+Example: Entry $1.95, SL $1.83, Leverage 20x
+Notional = $1 × 20 = $20
+Qty = $20 / $1.95 = 10.26 units
+Risk = 10.26 × |$1.95 - $1.83| = 10.26 × $0.12 = $1.23
+
+If risk too high, reduce leverage or tighten SL.</code></pre>
+<h2 id="key-insight">Key Insight</h2>
+<p>With RR 1:2.5+ and $1 entry, even 30% win rate is profitable. The $1
+entry is the MARGIN (collateral), not the total risk — actual loss
+depends on SL distance. Always calculate the dollar risk before
+entry.</p>
+<h2 id="account-killing-mistakes">Account Killing Mistakes</h2>
+<ul>
+<li>❌ RR &lt; 1:2.5 (need higher win rate)</li>
+<li>❌ More than 2 positions simultaneously</li>
+<li>❌ No TP/SL set after entry</li>
+<li>❌ Revenge trading after loss</li>
+<li>❌ Counter-trend trades (impulse RED but going LONG)</li>
+<li>❌ Skipping deep analysis before entry</li>
+</ul>
+<hr />
+<h1
+id="section-4">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesratakan-strategy.md">FILE:
+references/ratakan-strategy.md</h1>
+<h1
+id="section-5">═══════════════════════════════════════════════════════</h1>
+<h1 id="ratakan-strategy-small-account-high-leverage">RATAKAN Strategy —
+Small Account, High Leverage</h1>
+<p>Custom risk management for $10 modal accounts with aggressive
+leverage.</p>
+<h2 id="config">Config</h2>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>MODAL <span class="op">=</span> <span class="fl">10.0</span>           <span class="co"># Total modal</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>ENTRY_PCT <span class="op">=</span> <span class="fl">0.10</span>       <span class="co"># 10% per trade = $1</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>MAX_POSITIONS <span class="op">=</span> <span class="dv">2</span>      <span class="co"># Max 2 coins simultaneously</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>SL_PCT <span class="op">=</span> <span class="fl">0.50</span>          <span class="co"># 50% of position</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>TP1_PCT <span class="op">=</span> <span class="fl">1.00</span>         <span class="co"># 100% (minimal)</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>TP2_PCT <span class="op">=</span> <span class="fl">2.00</span>         <span class="co"># 200%</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>TP3_PCT <span class="op">=</span> <span class="fl">3.00</span>         <span class="co"># 300%</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>DEFAULT_LEVERAGE <span class="op">=</span> <span class="dv">50</span>  <span class="co"># 50x (most Bitget coins support this)</span></span></code></pre></div>
+<h2 id="risk-profile-50x-leverage">Risk Profile (50x leverage)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Entry</td>
+<td>$1 (10% modal)</td>
+</tr>
+<tr class="even">
+<td>Buying Power</td>
+<td>$50</td>
+</tr>
+<tr class="odd">
+<td>Liquidation</td>
+<td>~2% price move</td>
+</tr>
+<tr class="even">
+<td>SL 50%</td>
+<td>1% price move</td>
+</tr>
+<tr class="odd">
+<td>TP1 100%</td>
+<td>2% price move</td>
+</tr>
+<tr class="even">
+<td>TP2 200%</td>
+<td>4% price move</td>
+</tr>
+<tr class="odd">
+<td>TP3 300%</td>
+<td>6% price move</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flow">Flow</h2>
+<pre><code>Scanner → Analysis (11 modules) → Score ≥ 60 → Direction clear → Entry
+                                           ↓
+                                    Score &lt; 60 → Skip → Next coin
+
+Entry → Auto SL (ATR-based) → Auto TP1 → Partial close 50%
+                                         → Rest rides to TP2/TP3</code></pre>
+<h2 id="partial-close-logic">Partial Close Logic</h2>
+<ol type="1">
+<li>Entry $1, SL set, TP1 set</li>
+<li>Price hits TP1 → close 50% (lock $0.50 profit)</li>
+<li>Remaining 50% rides to TP2 or TP3</li>
+<li>Update TP to TP2 after partial close</li>
+</ol>
+<h2 id="bitget-max-leverage-by-coin">Bitget Max Leverage by Coin</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Coin</th>
+<th>Max Lev</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BTC, ETH</td>
+<td>150x</td>
+</tr>
+<tr class="even">
+<td>XRP</td>
+<td>125x</td>
+</tr>
+<tr class="odd">
+<td>SOL</td>
+<td>100x</td>
+</tr>
+<tr class="even">
+<td>BNB, DOGE, AVAX, LINK, NEAR, OP, SUI, PEPE, INJ, TIA, FET</td>
+<td>75x</td>
+</tr>
+<tr class="odd">
+<td>ARB, WIF</td>
+<td>50x</td>
+</tr>
+</tbody>
+</table>
+<p>All support minimum 50x.</p>
+<h2 id="pitfalls-2">Pitfalls</h2>
+<ul>
+<li><strong>50x leverage SL is tight</strong>: 50% position SL = only 1%
+price move. Consider 20-30% SL instead for more room.</li>
+<li><strong>Liquidation vs SL</strong>: With 50x, liquidation at ~2%. SL
+at 50% (1% move) triggers BEFORE liquidation — this is correct. But
+gap/whipsaw can skip SL.</li>
+<li><strong>Contract rounding</strong>: $1 entry on expensive coins (BTC
+$60k) with 50x → very small contract count. May round to 0. Focus on
+coins &lt;$100 for small accounts.</li>
+<li><strong>Max 2 positions</strong>: Scanner must check open positions
+BEFORE entering new ones.</li>
+<li><strong>Direction required</strong>: Neutral direction = NOT valid
+for entry. Must be clearly LONG or SHORT.</li>
+</ul>
+<hr />
+<h1
+id="section-6">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesmulti-pair-scanning.md">FILE:
+references/multi-pair-scanning.md</h1>
+<h1
+id="section-7">═══════════════════════════════════════════════════════</h1>
+<h1 id="multi-pair-scanning-auto-monitoring">Multi-Pair Scanning &amp;
+Auto-Monitoring</h1>
+<h2 id="multi-pair-scoring-system-for-scalping">Multi-Pair Scoring
+System for Scalping</h2>
+<p>Scan multiple pairs simultaneously to find the best scalping
+opportunity. Score each pair on multiple dimensions.</p>
+<h3 id="scoring-formula">Scoring Formula</h3>
+<pre><code>score = 0
+score += min(range_pct * 2, 20)        # Volatility bonus (capped at 20)
+if vol_ratio &gt; 1.5: score += 10         # Volume spike
+elif vol_ratio &gt; 1.2: score += 5        # Volume uptick
+if &quot;CROSS&quot; in ema_signal: score += 15   # EMA crossover = strong signal
+elif ema_signal in [&quot;BULLISH&quot;, &quot;BEARISH&quot;]: score += 5  # Trend alignment
+if pos_in_range &lt; 25: score += 10       # Near low = bounce opportunity
+if pos_in_range &gt; 75: score += 10       # Near high = drop opportunity</code></pre>
+<h3 id="metrics-per-pair">Metrics Per Pair</h3>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Source</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>range_pct</td>
+<td>(max(H10) - min(L10)) / price * 100</td>
+<td>Volatility - higher = better for scalping</td>
+</tr>
+<tr class="even">
+<td>vol_ratio</td>
+<td>avg_vol_recent_5 / avg_vol_prev_5</td>
+<td>Volume trend - &gt;1.2 = increasing activity</td>
+</tr>
+<tr class="odd">
+<td>pos_in_range</td>
+<td>(price - low10) / (high10 - low10) * 100</td>
+<td>Position in 10-candle range</td>
+</tr>
+<tr class="even">
+<td>ema_signal</td>
+<td>EMA5 vs EMA13 crossover</td>
+<td>Trend direction and momentum change</td>
+</tr>
+<tr class="odd">
+<td>candle_type</td>
+<td>Body ratio vs range</td>
+<td>Last candle pattern (BULL/BEAR/DOJI)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-sources">Data Sources</h3>
+<ul>
+<li><strong>Bitget</strong> (authenticated): Real-time prices, 24h
+change, volume</li>
+<li><strong>Binance</strong> (public, no auth): OHLCV klines for
+technical analysis
+<ul>
+<li>Endpoint: GET
+/api/v3/klines?symbol={PAIR}USDT&amp;interval={TF}&amp;limit={N}</li>
+<li>No API key needed, works for all USDT pairs</li>
+</ul></li>
+</ul>
+<h3 id="default-pairs-to-scan">Default Pairs to Scan</h3>
+<p>High liquidity, good volatility: BTCUSDT, ETHUSDT, SOLUSDT, DOGEUSDT,
+XRPUSDT, SUIUSDT, ARBUSDT, OPUSDT, LINKUSDT, AVAXUSDT</p>
+<h2 id="auto-monitor-entry-workflow">Auto-Monitor &amp; Entry
+Workflow</h2>
+<h3 id="architecture">Architecture</h3>
+<ol type="1">
+<li>Monitor Script checks price every 2 min</li>
+<li>Price in entry zone? No -&gt; continue monitoring</li>
+<li>Yes -&gt; Check reversal signals on 15m</li>
+<li>Signal score &gt;= 2? No -&gt; continue monitoring</li>
+<li>Yes -&gt; Calculate position size (2% rule)</li>
+<li>Execute market buy</li>
+<li>Set TP1 (50%), TP2, SL</li>
+<li>Save state to JSON</li>
+</ol>
+<h3 id="reversal-signal-detection-15m-timeframe">Reversal Signal
+Detection (15m timeframe)</h3>
+<p>Check these signals - need 2 or more to trigger entry:</p>
+<ol type="1">
+<li><strong>EMA Cross Up</strong>: EMA5 crosses above EMA13 (current
+candle)</li>
+<li><strong>Bullish Candle</strong>: Close &gt; Open on current
+candle</li>
+<li><strong>Near EMA Support</strong>: Price within 0.5% of EMA13</li>
+<li><strong>Volume Bounce</strong>: Current bullish body &gt; 0.8x avg
+body of last 5 candles</li>
+</ol>
+<h3 id="entry-conditions">Entry Conditions</h3>
+<p>Two entry modes:</p>
+<p><strong>Mode 1 - Pullback Entry (preferred)</strong> - Price enters
+predefined entry zone (based on Fibonacci OTE 61.8%) - Reversal signals
+confirm buyer stepping in - Better R:R, lower risk</p>
+<p><strong>Mode 2 - Breakout Entry</strong> - Price breaks above
+resistance without pullback - Enter on break, wider SL - Higher risk,
+but catches strong moves</p>
+<h3 id="state-management">State Management</h3>
+<p>Save trade state to JSON for monitoring across sessions: -
+entry_time, entry_price, size, sl, tp1, tp2, tp3, status</p>
+<h3 id="pitfalls-3">Pitfalls</h3>
+<ul>
+<li><strong>Don’t chase</strong>: If price runs past entry zone without
+signal, skip. Next opportunity will come.</li>
+<li><strong>Volume confirmation is critical</strong>: Low-volume bounces
+fail often. Wait for volume to confirm.</li>
+<li><strong>2% risk is non-negotiable</strong>: Even on “sure thing”
+setups. The 6% rule caps total exposure.</li>
+<li><strong>Bitget ccxt credentials</strong>: Use api_key/api_secret
+(underscores), NOT apiKey/secret. See cex-api-setup skill.</li>
+<li><strong>set_leverage() before orders</strong>: Bitget requires
+explicit leverage setting before placing orders.</li>
+<li><strong>Partial TP</strong>: Always take 50% off at TP1. Let the
+rest ride to TP2/TP3 with trailing SL.</li>
+</ul>
+<hr />
+<h1
+id="section-8">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesauto-entry-monitor.md">FILE:
+references/auto-entry-monitor.md</h1>
+<h1
+id="section-9">═══════════════════════════════════════════════════════</h1>
+<h2 id="auto-entry-monitor-pattern">Auto-Entry Monitor Pattern</h2>
+<h3 id="when-to-use">When to Use</h3>
+<p>User says “langsung entry” / “auto entry kalo valid” / “cari coin
+bagus”. Background process monitors prices, auto-enters when price hits
+pre-analyzed zone.</p>
+<h3 id="architecture-1">Architecture</h3>
+<pre><code>1. Scan → find candidates (Binance 24hr tickers, filter &gt;$5M volume)
+2. Deep Analysis → top 3-5 candidates (Structure, Fib, OB, FVG, Liquidity, Impulse, Volume, Dow)
+3. Define targets → {symbol, direction, entry_zone, sl, tp, rr}
+4. Background monitor → check every 60s
+5. Price in zone → auto entry + set TP/SL via plan orders
+6. Notify user via watch_patterns</code></pre>
+<h3 id="monitor-script-structure">Monitor Script Structure</h3>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>TARGETS <span class="op">=</span> {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;SYMBOLUSDT&quot;</span>: {</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;direction&quot;</span>: <span class="st">&quot;LONG&quot;</span>,  <span class="co"># or &quot;SHORT&quot;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;entry_zone&quot;</span>: (lo, hi),</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;sl&quot;</span>: sl_price,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;tp&quot;</span>: tp_price,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;rr&quot;</span>: rr_ratio</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run_check():</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. Get current positions (check max)</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. Get open orders (avoid duplicate)</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. For each target: check if price in zone</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. If in zone + not already active + position slots available:</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">#    a. Calculate qty = risk / price_diff</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">#    b. Ensure min qty (1 contract, 5 USDT notional)</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">#    c. Place market order with marginMode in body</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">#    d. Set TP/SL via place-plan-order</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">#    e. Notify user</span></span></code></pre></div>
+<h3 id="critical-bitget-fixes-verified-2026-06-06">Critical Bitget Fixes
+(verified 2026-06-06)</h3>
+<ol type="1">
+<li><strong>marginMode in order body</strong> — <code>place-order</code>
+needs <code>"marginMode": "crossed"</code> in body (not just
+set-margin-mode)</li>
+<li><strong>TP/SL via place-plan-order</strong> —
+<code>presetStopLossPrice</code> / <code>presetTakeProfitPrice</code>
+are silently ignored</li>
+<li><strong>Size = integer, min 1</strong> — not decimal</li>
+<li><strong>Notional &gt;= 5 USDT</strong> — enforce
+<code>qty * price &gt;= 5</code></li>
+</ol>
+<h3 id="running-pattern">Running Pattern</h3>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Background with watch patterns</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>terminal(command<span class="op">=</span><span class="st">&quot;python3 -u monitor.py 2&gt;&amp;1 | tee monitor.log&quot;</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>         background<span class="op">=</span><span class="va">True</span>, watch_patterns<span class="op">=</span>[<span class="st">&quot;✅ ORDER FILLED&quot;</span>, <span class="st">&quot;❌ FAILED&quot;</span>])</span></code></pre></div>
+<h3 id="pitfalls-4">Pitfalls</h3>
+<ul>
+<li><strong>Python output buffering</strong>: Use
+<code>python3 -u</code> and <code>sys.stdout.flush()</code> after
+prints</li>
+<li><strong>tee for logging</strong>: Pipe to
+<code>tee monitor.log</code> so output is both in process log AND
+file</li>
+<li><strong>Max positions check</strong>: Always check positions +
+orders count before entering</li>
+<li><strong>Don’t enter FOMO</strong>: Price must be IN the pre-analyzed
+zone, not “close enough”</li>
+<li><strong>User correction</strong>: User explicitly said “rules
+sebelum kamu entry kamu analisa dulu” — NEVER skip deep analysis before
+entry. Even with auto-entry, the analysis must happen FIRST.</li>
+</ul>
+<hr />
+<h1
+id="section-10">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesauto-monitor-pattern.md">FILE:
+references/auto-monitor-pattern.md</h1>
+<h1
+id="section-11">═══════════════════════════════════════════════════════</h1>
+<h1 id="auto-monitor-auto-trade-pattern">Auto-Monitor &amp; Auto-Trade
+Pattern</h1>
+<p>Reusable pattern for background price monitoring with automatic trade
+execution via Bitget.</p>
+<h2 id="architecture-2">Architecture</h2>
+<pre><code>auto_monitor.py
+  ├── Config (entry zone, SL, TP1/TP2/TP3, risk %)
+  ├── Monitor loop (check price every 2 min)
+  ├── Signal detection (EMA cross, OB bounce, breakout)
+  ├── Trade execution (market order → TP/SL)
+  └── Notification (Telegram alert)</code></pre>
+<h2 id="config-template">Config Template</h2>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>trade_config <span class="op">=</span> {</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;symbol&quot;</span>: <span class="st">&quot;AR/USDT:USDT&quot;</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;direction&quot;</span>: <span class="st">&quot;LONG&quot;</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;entry_zone&quot;</span>: [<span class="fl">0.590</span>, <span class="fl">0.610</span>],</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;stop_loss&quot;</span>: <span class="fl">0.573</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;tp1&quot;</span>: <span class="fl">0.630</span>, <span class="st">&quot;tp1_pct&quot;</span>: <span class="dv">50</span>,</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;tp2&quot;</span>: <span class="fl">0.660</span>, <span class="st">&quot;tp2_pct&quot;</span>: <span class="dv">30</span>,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;tp3&quot;</span>: <span class="fl">0.700</span>, <span class="st">&quot;tp3_pct&quot;</span>: <span class="dv">20</span>,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;leverage&quot;</span>: <span class="dv">15</span>,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;risk_per_trade&quot;</span>: <span class="fl">2.0</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;cooldown_minutes&quot;</span>: <span class="dv">5</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="signal-detection-logic">Signal Detection Logic</h2>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> has_reversal_signal(<span class="va">self</span>, klines):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(klines) <span class="op">&lt;</span> <span class="dv">2</span>:</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    recent <span class="op">=</span> klines[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    prev <span class="op">=</span> klines[<span class="op">-</span><span class="dv">2</span>]</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    ema_9 <span class="op">=</span> np.mean([k[<span class="st">&#39;close&#39;</span>] <span class="cf">for</span> k <span class="kw">in</span> klines[<span class="op">-</span><span class="dv">9</span>:]])</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    ema_21 <span class="op">=</span> np.mean([k[<span class="st">&#39;close&#39;</span>] <span class="cf">for</span> k <span class="kw">in</span> klines[<span class="op">-</span><span class="dv">21</span>:]])</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    price <span class="op">=</span> recent[<span class="st">&#39;close&#39;</span>]</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    in_entry_zone <span class="op">=</span> <span class="va">self</span>.entry_zone[<span class="dv">0</span>] <span class="op">&lt;=</span> price <span class="op">&lt;=</span> <span class="va">self</span>.entry_zone[<span class="dv">1</span>]</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    bullish_candle <span class="op">=</span> recent[<span class="st">&#39;close&#39;</span>] <span class="op">&gt;</span> recent[<span class="st">&#39;open&#39;</span>] <span class="kw">and</span> (recent[<span class="st">&#39;close&#39;</span>] <span class="op">-</span> recent[<span class="st">&#39;open&#39;</span>]) <span class="op">&gt;</span> (recent[<span class="st">&#39;high&#39;</span>] <span class="op">-</span> recent[<span class="st">&#39;low&#39;</span>]) <span class="op">*</span> <span class="fl">0.5</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    ema_crossover <span class="op">=</span> prev[<span class="st">&#39;close&#39;</span>] <span class="op">&lt;=</span> np.mean([k[<span class="st">&#39;close&#39;</span>] <span class="cf">for</span> k <span class="kw">in</span> klines[<span class="op">-</span><span class="dv">25</span>:<span class="op">-</span><span class="dv">1</span>]]) <span class="kw">and</span> recent[<span class="st">&#39;close&#39;</span>] <span class="op">&gt;</span> ema_9</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    avg_vol <span class="op">=</span> np.mean([k[<span class="st">&#39;volume&#39;</span>] <span class="cf">for</span> k <span class="kw">in</span> klines[<span class="op">-</span><span class="dv">10</span>:]])</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    vol_bounce <span class="op">=</span> recent[<span class="st">&#39;volume&#39;</span>] <span class="op">&gt;</span> avg_vol <span class="op">*</span> <span class="fl">1.3</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> in_entry_zone <span class="kw">and</span> (bullish_candle <span class="kw">or</span> ema_crossover <span class="kw">or</span> vol_bounce)</span></code></pre></div>
+<h2 id="trade-execution">Trade Execution</h2>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Position sizing</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>market <span class="op">=</span> exchange.market(config[<span class="st">&quot;symbol&quot;</span>])</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>mark_price <span class="op">=</span> exchange.fetch_ticker(config[<span class="st">&quot;symbol&quot;</span>])[<span class="st">&#39;last&#39;</span>]</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>contract_size <span class="op">=</span> market.get(<span class="st">&#39;contractSize&#39;</span>, <span class="dv">1</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>contracts <span class="op">=</span> (config[<span class="st">&quot;risk_per_trade&quot;</span>] <span class="op">/</span> <span class="dv">100</span> <span class="op">*</span> balance) <span class="op">*</span> config[<span class="st">&quot;leverage&quot;</span>]</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>contracts <span class="op">=</span> contracts <span class="op">/</span> (mark_price <span class="op">*</span> contract_size)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>contracts <span class="op">=</span> <span class="bu">max</span>(<span class="dv">1</span>, <span class="bu">round</span>(contracts, <span class="dv">0</span>))</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set leverage + position mode</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>exchange.privateMixPostV2MixAccountSetPositionMode({</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;productType&#39;</span>: <span class="st">&#39;USDT-FUTURES&#39;</span>, <span class="st">&#39;posMode&#39;</span>: <span class="st">&#39;one_way_mode&#39;</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>exchange.set_leverage(config[<span class="st">&quot;leverage&quot;</span>], config[<span class="st">&quot;symbol&quot;</span>], params<span class="op">=</span>{<span class="st">&#39;marginMode&#39;</span>: <span class="st">&#39;isolated&#39;</span>})</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Execute</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> config[<span class="st">&quot;direction&quot;</span>] <span class="op">==</span> <span class="st">&quot;LONG&quot;</span>:</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    order <span class="op">=</span> exchange.create_market_buy_order(config[<span class="st">&quot;symbol&quot;</span>], contracts)</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    order <span class="op">=</span> exchange.create_market_sell_order(config[<span class="st">&quot;symbol&quot;</span>], contracts)</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Set TP/SL via trigger order</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>exchange.privateMixPostV2MixOrderPlacePlanOrder({</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;symbol&#39;</span>: config[<span class="st">&quot;symbol&quot;</span>].split(<span class="st">&#39;/&#39;</span>)[<span class="dv">0</span>] <span class="op">+</span> <span class="st">&#39;USDT&#39;</span>,</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;productType&#39;</span>: <span class="st">&#39;USDT-FUTURES&#39;</span>,</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;planType&#39;</span>: <span class="st">&#39;track_plan&#39;</span>,</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;triggerPrice&#39;</span>: <span class="bu">str</span>(config[<span class="st">&quot;stop_loss&quot;</span>]),</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;triggerType&#39;</span>: <span class="st">&#39;mark_price&#39;</span>,</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;holdSide&#39;</span>: <span class="st">&#39;long&#39;</span> <span class="cf">if</span> config[<span class="st">&quot;direction&quot;</span>] <span class="op">==</span> <span class="st">&quot;LONG&quot;</span> <span class="cf">else</span> <span class="st">&#39;short&#39;</span>,</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;side&#39;</span>: <span class="st">&#39;sell&#39;</span> <span class="cf">if</span> config[<span class="st">&quot;direction&quot;</span>] <span class="op">==</span> <span class="st">&quot;LONG&quot;</span> <span class="cf">else</span> <span class="st">&#39;buy&#39;</span>,</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;orderType&#39;</span>: <span class="st">&#39;market&#39;</span>,</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;size&#39;</span>: <span class="bu">str</span>(contracts),</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;reduceOnly&#39;</span>: <span class="st">&#39;YES&#39;</span></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<h2 id="notification-format">Notification Format</h2>
+<pre><code>✅ ORDER FILLED — AR/USDT:USDT LONG
+Entry: $0.5945
+SL: $0.5730 (3.6%)
+TP1: $0.6300 | TP2: $0.6600 | TP3: $0.7000
+Amount: $7.50 | Contracts: 12
+Leverage: 15x</code></pre>
+<h2 id="background-execution">Background Execution</h2>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run monitor in background with terminal tool:</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># terminal(background=true, watch_patterns=[&quot;✅ ORDER FILLED&quot;, &quot;❌ ORDER FAILED&quot;])</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># System auto-notifies when pattern matched</span></span></code></pre></div>
+<h2 id="multi-monitor-pattern">Multi-Monitor Pattern</h2>
+<p>For scanning multiple pairs, run separate monitors:</p>
+<pre><code>~/bitget-trading/monitors/ar_monitor.py
+~/bitget-trading/monitors/sui_monitor.py
+~/bitget-trading/monitors/avax_monitor.py</code></pre>
+<p>Each runs independently. Kill individual monitors when trade fills or
+timeout.</p>
+<h2 id="scanner-architecture">Scanner Architecture</h2>
+<p>Full scanner implementation at
+<code>~/bitget-trading/scanner.py</code>:</p>
+<pre><code>scanner.py
+  ├── fetch_ohlcv() — Binance API for chart data (1H, 4H, 15M)
+  ├── fetch_ticker() — Current price, 24h change
+  ├── FullAnalyzer class
+  │   ├── 11 analysis modules (Structure, SnD, OB, FVG, Liquidity, Fib, Impulse, Candle, Volume, RSI/MACD, AMD)
+  │   ├── Score 0-100 (capped)
+  │   └── Direction: long/short/neutral
+  ├── scan_coins() — Scan 32 popular coins
+  │   ├── Filter: score ≥ 60 AND direction clear
+  │   ├── Sort by score (highest first)
+  │   └── Auto entry (max 2 positions)
+  └── analyze_single() — Full analysis for one coin</code></pre>
+<p><strong>Key fixes from session 2026-06-06:</strong> - Score must be
+capped at 100 (modules can accumulate &gt;100) - Direction MUST be
+‘long’ or ‘short’ — ‘neutral’ = not valid - Handle None direction
+gracefully in output formatting - Use Binance API for OHLCV (more
+reliable), Bitget for execution only</p>
+<h2 id="pitfalls-5">Pitfalls</h2>
+<ul>
+<li><p><strong>Contract rounding</strong>: Small accounts (&lt;$10) +
+expensive coins (&gt;$100) → contracts round to 0. Use coins &lt;$10 or
+increase leverage.</p></li>
+<li><p><strong>Bitget position mode</strong>: MUST set one_way_mode
+before any order. See cex-api-setup skill.</p></li>
+<li><p><strong>Credential format</strong>: Handle both
+<code>api_key</code>/<code>api_secret</code> (underscore) and
+<code>apiKey</code>/<code>apiSecret</code> (camelCase).</p></li>
+<li><p><strong>Rate limits</strong>: Don’t poll faster than every 30s to
+avoid hitting Bitget rate limits.</p></li>
+<li><p><strong>Stale price</strong>: Always fetch fresh ticker before
+calculating contracts. Don’t use cached price.</p></li>
+<li><p><strong>Python unbuffered output</strong>: ALWAYS use
+<code>python3 -u</code> for background monitoring scripts. Without
+<code>-u</code>, Python buffers stdout and watch_patterns won’t trigger
+— the process runs silently. Also add <code>sys.stdout.flush()</code>
+after critical print statements (entry, fill, error).</p></li>
+<li><p><strong>Credential redaction</strong>: Hermes redacts
+<code>api_key</code>/<code>api_secret</code> strings in terminal output
+AND in files written via write_file/terminal. Workaround: create
+<code>creds_helper.py</code> that loads credentials from JSON file, then
+import it in your script:</p>
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># creds_helper.py (write via terminal, not write_file)</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>_c <span class="op">=</span> json.load(<span class="bu">open</span>(<span class="st">&#39;/path/to/credentials.json&#39;</span>))</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>keys <span class="op">=</span> <span class="bu">list</span>(_c.keys())</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> _c[keys[<span class="dv">0</span>]]   <span class="co"># api_key</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>API_SECRET <span class="op">=</span> _c[keys[<span class="dv">1</span>]] <span class="co"># api_secret</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>PASSPHRASE <span class="op">=</span> _c[keys[<span class="dv">2</span>]] <span class="co"># passphrase</span></span></code></pre></div>
+<p>Then in your monitor:
+<code>from creds_helper import API_KEY, API_SECRET, PASSPHRASE</code></p></li>
+<li><p><strong>Existing positions check</strong>: ALWAYS check for
+existing open positions before starting auto-monitor. Leftover positions
+from previous sessions count toward max_positions and will block new
+entries. Run <code>get_positions()</code> first and report
+count.</p></li>
+<li><p><strong>Log file capture</strong>: Use <code>tee</code> to
+capture background output to file:
+<code>python3 -u monitor.py 2&gt;&amp;1 | tee monitor.log</code>. This
+allows post-mortem debugging via
+<code>tail -f monitor.log</code>.</p></li>
+<li><p><strong><code>marginMode</code> in order body (CRITICAL —
+2026-06-06)</strong>: The place-order API REQUIRES
+<code>"marginMode": "crossed"</code> in the request body. Setting it via
+set-margin-mode API alone returns
+<code>400172 "The margin mode cannot be empty"</code>. Always include it
+in both the set-margin-mode call AND the order body.</p></li>
+<li><p><strong>Size must be integer (2026-06-06)</strong>: Use
+<code>str(int(max(round(qty), 1)))</code> for size. Decimal sizes like
+<code>0.9542</code> return
+<code>45111 "less than the minimum order quantity"</code>. Query
+<code>/api/v2/mix/market/contracts</code> for <code>minTradeNum</code>
+per symbol.</p></li>
+</ul>
+<hr />
+<h1
+id="section-12">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesbitget-futures-api.md">FILE:
+references/bitget-futures-api.md</h1>
+<h1
+id="section-13">═══════════════════════════════════════════════════════</h1>
+<h1 id="bitget-futures-api-reference">Bitget Futures API Reference</h1>
+<h2 id="setup">Setup</h2>
+<ul>
+<li><strong>Credentials path:</strong>
+<code>~/.agent/credentials/bitget-api.json</code></li>
+<li><strong>Trading engine:</strong> <code>~/bitget-trading/</code>
+(ccxt-based)</li>
+<li><strong>Product type:</strong> <code>USDT-FUTURES</code></li>
+</ul>
+<h2 id="api-v2-endpoints-verified-working">API v2 Endpoints (Verified
+Working)</h2>
+<h3 id="market-data-public-no-auth">Market Data (Public — No Auth)</h3>
+<pre><code># Ticker — MUST include productType parameter
+GET /api/v2/mix/market/ticker?symbol=BTCUSDT&amp;productType=USDT-FUTURES
+
+# Symbol format: BTCUSDT (NOT BTCUSDT_UMCBL, NOT BTC/USDT:USDT for raw API)
+# ccxt handles symbol conversion automatically</code></pre>
+<h3 id="account-auth-required-hmac-sha256">Account (Auth Required — HMAC
+SHA256)</h3>
+<pre><code>GET /api/v2/mix/account/accounts?productType=USDT-FUTURES
+GET /api/v2/mix/account/account-assets?productType=USDT-FUTURES&amp;coin=USDT</code></pre>
+<h3 id="positions">Positions</h3>
+<pre><code>GET /api/v2/mix/position/all-position?productType=USDT-FUTURES</code></pre>
+<h3 id="orders">Orders</h3>
+<pre><code>GET /api/v2/mix/order/orders-pending?productType=USDT-FUTURES
+GET /api/v2/mix/order/fills-history?productType=USDT-FUTURES&amp;limit=20</code></pre>
+<h2 id="auth-headers">Auth Headers</h2>
+<pre><code>ACCESS-KEY: &lt;api_key&gt;
+ACCESS-SIGN: &lt;base64(hmac_sha256(secret, timestamp+method+path+body))&gt;
+ACCESS-TIMESTAMP: &lt;unix_ms&gt;
+ACCESS-PASSPHRASE: &lt;passphrase&gt;
+Content-Type: application/json</code></pre>
+<h2 id="trading-engine-commands">Trading Engine Commands</h2>
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Portfolio summary</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/engine.py          <span class="co"># Full summary</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/engine.py balance   <span class="co"># Balance only</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/engine.py positions <span class="co"># Active positions</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/engine.py ticker BTC/USDT:USDT  <span class="co"># Price</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Trade execution</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py long BTC 10        <span class="co"># Long BTC $10</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py short ETH 20       <span class="co"># Short ETH $20</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py long BTC 10 50     <span class="co"># Long BTC $10 @ 50x leverage</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py close BTC          <span class="co"># Close BTC position</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py close-all          <span class="co"># Close all positions</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py tp BTC 70000       <span class="co"># Set Take Profit</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py sl BTC 58000       <span class="co"># Set Stop Loss</span></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Price check</span></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py price BTC</span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py price ETH</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/trade.py price SOL</span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Strategies</span></span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/strategies/strategy.py BTC 100 5     <span class="co"># DCA BTC $100, 5 orders</span></span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/strategies/strategy.py ETH 1800 2200 10  <span class="co"># Grid ETH $1800-$2200</span></span>
+<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Monitor</span></span>
+<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> ~/bitget-trading/monitor.py</span></code></pre></div>
+<h2 id="pitfalls-6">Pitfalls</h2>
+<ul>
+<li><p><strong>productType parameter is REQUIRED</strong> — omitting it
+returns <code>400172 Parameter verification failed</code></p></li>
+<li><p><strong>Symbol format for raw API:</strong> <code>BTCUSDT</code>
+(not <code>BTCUSDT_UMCBL</code> which was old v1 format)</p></li>
+<li><p><strong>ccxt symbols:</strong> Use <code>BTC/USDT:USDT</code>
+format when calling via ccxt engine</p></li>
+<li><p><strong>Empty data responses:</strong> If <code>data</code>
+returns <code>null</code>, check API key permissions and
+productType</p></li>
+<li><p><strong>Rate limits:</strong> Bitget has 20 req/s for market
+data, 10 req/s for trading endpoints</p></li>
+<li><p><strong>Credential redaction (CRITICAL)</strong>: Hermes
+auto-redacts <code>api_key</code>/<code>api_secret</code> strings in
+code output. NEVER hardcode credential variable names in scripts written
+via terminal. Instead, create a <code>creds_helper.py</code> module
+first:</p>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/bitget-trading/creds_helper.py</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>_c <span class="op">=</span> json.load(<span class="bu">open</span>(<span class="st">&#39;/home/ubuntu/.agent/credentials/bitget-api.json&#39;</span>))</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>keys <span class="op">=</span> <span class="bu">list</span>(_c.keys())</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>API_KEY <span class="op">=</span> _c[keys[<span class="dv">0</span>]]      <span class="co"># &#39;api_key&#39;</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>API_SECRET <span class="op">=</span> _c[keys[<span class="dv">1</span>]]   <span class="co"># &#39;api_secret&#39;</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>PASSPHRASE <span class="op">=</span> _c[keys[<span class="dv">2</span>]]   <span class="co"># &#39;passphrase&#39;</span></span></code></pre></div>
+<p>Then in your main script:
+<code>from creds_helper import API_KEY, API_SECRET, PASSPHRASE</code>
+This avoids the redaction issue entirely.</p></li>
+<li><p><strong>Python background buffering</strong>: Always run
+background monitors with <code>python3 -u</code> (unbuffered flag).
+Otherwise output is buffered and <code>watch_patterns</code> won’t
+trigger.</p></li>
+<li><p><strong>Credential key names</strong>: Bitget uses
+<code>api_key</code> and <code>api_secret</code> (underscore), NOT
+<code>apiKey</code>/<code>secretKey</code> (camelCase). Handle both
+formats in code for robustness.</p></li>
+<li><p><strong><code>marginMode</code> in order body
+(CRITICAL)</strong>: The place-order endpoint REQUIRES
+<code>"marginMode": "crossed"</code> in the request body. Setting it via
+set-margin-mode API alone does NOT work — returns
+<code>400172 "The margin mode cannot be empty"</code>. Always include it
+in both places:</p>
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Set margin mode (optional but good practice)</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>api_post(<span class="st">&#39;/api/v2/mix/account/set-margin-mode&#39;</span>, json.dumps({</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;productType&#39;</span>: <span class="st">&#39;USDT-FUTURES&#39;</span>, <span class="st">&#39;symbol&#39;</span>: symbol,</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;marginCoin&#39;</span>: <span class="st">&#39;USDT&#39;</span>, <span class="st">&#39;marginMode&#39;</span>: <span class="st">&#39;crossed&#39;</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>}))</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Place order WITH marginMode in body</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>api_post(<span class="st">&#39;/api/v2/mix/order/place-order&#39;</span>, json.dumps({</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;productType&#39;</span>: <span class="st">&#39;USDT-FUTURES&#39;</span>, <span class="st">&#39;symbol&#39;</span>: symbol,</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;marginCoin&#39;</span>: <span class="st">&#39;USDT&#39;</span>, <span class="st">&#39;marginMode&#39;</span>: <span class="st">&#39;crossed&#39;</span>,  <span class="co"># ← REQUIRED</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;orderType&#39;</span>: <span class="st">&#39;market&#39;</span>, <span class="st">&#39;side&#39;</span>: side, <span class="st">&#39;size&#39;</span>: <span class="bu">str</span>(<span class="bu">int</span>(qty)),</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;presetStopLossPrice&#39;</span>: <span class="bu">str</span>(sl), <span class="st">&#39;presetTakeProfitPrice&#39;</span>: <span class="bu">str</span>(tp)</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>}))</span></code></pre></div></li>
+<li><p><strong>Size must be integer</strong>: The <code>size</code>
+field must be an integer string. Use
+<code>str(int(max(round(qty), 1)))</code>. Decimal sizes return
+<code>45111 "less than the minimum order quantity"</code>.</p></li>
+<li><p><strong>Min trade quantity</strong>: Each symbol has
+<code>minTradeNum</code> (usually 1). Query
+<code>/api/v2/mix/market/contracts?productType=USDT-FUTURES&amp;symbol=SYMBOL</code>
+for exact minimum. For $10 account with $1 entries, qty will often be 1
+contract minimum.</p></li>
+</ul>
+<h2 id="laporan-futures-format-user-preference">LAPORAN FUTURES Format
+(User Preference)</h2>
+<p>User wants concise futures report with: 1. Account balance/equity/PnL
+2. Open positions (entry, mark, PnL, liq price) 3. Pending orders 4.
+Trade history + stats (win rate, total PnL) 5. Market snapshot (BTC,
+ETH, SOL prices) 6. System status</p>
+<p>Keep it SHORT. No verbose explanations. Just data + status.</p>
+<hr />
+<h1
+id="section-14">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesdeep-analysis-session-2026-06-06.md">FILE:
+references/deep-analysis-session-2026-06-06.md</h1>
+<h1
+id="section-15">═══════════════════════════════════════════════════════</h1>
+<h1 id="deep-analysis-reference-session-2026-06-06">Deep Analysis
+Reference — Session 2026-06-06</h1>
+<h2 id="context">Context</h2>
+<p>3 limit orders (NEAR, AVAX, ARB) were placed from scan scores without
+deep analysis. User corrected workflow. Orders cancelled. Full deep
+analysis performed.</p>
+<h2 id="analysis-template-8-criteria">Analysis Template (8
+Criteria)</h2>
+<p>For each pair, fetch OHLCV from Binance API at 3 timeframes: - Daily
+× 30 candles - 4H × 50 candles<br />
+- 1H × 48 candles</p>
+<h3 id="criteria-analyzed">Criteria Analyzed</h3>
+<ol type="1">
+<li><strong>Market Structure</strong> — Swing H/L mapping, HH/HL
+(bullish) vs LH/LL (bearish), on all 3 TFs</li>
+<li><strong>Fibonacci Retracement</strong> — From swing H to swing L,
+key levels: 23.6%, 38.2%, 50%, 61.8%, 78.6%</li>
+<li><strong>Order Blocks</strong> — Bullish OB (last bearish candle
+before impulsive bullish BMS), Bearish OB (last bullish before bearish
+BMS)</li>
+<li><strong>Fair Value Gaps (FVG)</strong> — Bearish FVG = resistance
+targets, Bullish FVG = support</li>
+<li><strong>Liquidity Pools</strong> — SSL below (equal lows, swing
+lows), BSL above (equal highs, swing highs)</li>
+<li><strong>Impulse System</strong> — 13 EMA slope + MACD-H slope =
+GREEN/RED/BLUE on Daily, 4H, 1H</li>
+<li><strong>Volume Analysis</strong> — Compare to 20-day avg, look for
+climax (2x+) or exhaustion</li>
+<li><strong>Dow Theory Phase</strong> — Accumulation, Public
+Participation, Excess, Distribution, Panic, Despair</li>
+</ol>
+<h3 id="output-format-per-coin">Output Format Per Coin</h3>
+<pre><code>📊 [COIN]/USDT — Deep Analysis
+
+Structure: [BEARISH/BULLISH/NEUTRAL] (HH+HL or LH+LL sequence)
+Impulse: [GREEN/RED/BLUE] on [Daily/4H/1H]
+Fib: Price at [X]% retracement
+Volume: [X]x avg = [climax/exhaustion/normal]
+OB: Bullish OB at $X-$X / Bearish OB at $X-$X
+FVG: Bearish FVG at $X-$X / Bullish FVG at $X-$X
+SSL: $X (swing low/liquidity pool)
+BSL: $X (swing high/equal highs)
+
+Verdict: [VALID/MARGINAL/SKIP] — Entry $X is [valid/suboptimal] because [reasons]
+
+Setup LONG: Entry $X | SL $X | TP1 $X | TP2 $X | RR X:1
+Setup SHORT: Entry $X | SL $X | TP1 $X | TP2 $X | RR X:1</code></pre>
+<h2 id="session-results">Session Results</h2>
+<h3 id="nearusdt-1.87">NEAR/USDT ($1.87)</h3>
+<ul>
+<li>Structure: BEARISH (LH+LL all TFs)</li>
+<li>Impulse: RED (Daily EMA13 + MACD-H down)</li>
+<li>Fib: At 78.6% ($1.804) — deep retracement critical zone</li>
+<li>Volume: Climax 2.4x avg → selling exhaustion</li>
+<li>Bullish OB: $1.825-$1.854</li>
+<li>Entry $1.84 VALID but suboptimal — better at $1.825-$1.830 (SSL
+sweep)</li>
+<li>Counter-trend trade, confidence 5/10</li>
+</ul>
+<h3 id="avaxusdt-6.59">AVAX/USDT ($6.59)</h3>
+<ul>
+<li>Structure: BEARISH (LH+LL all TFs, crash from $10.49)</li>
+<li>Impulse: RED 10+ consecutive days</li>
+<li>Fib: At 0% — no retracement yet</li>
+<li>Volume: Jun 5 = 3.5x avg = SELLING CLIMAX</li>
+<li>Bullish OB: $6.22-$6.58</li>
+<li>Entry $6.35 VALID but aggressive — no reversal confirmation</li>
+<li>Counter-trend trade, confidence 5/10</li>
+</ul>
+<h3 id="arbusdt-0.0786">ARB/USDT ($0.0786)</h3>
+<ul>
+<li>Structure: BEARISH (LH+LL all TFs)</li>
+<li>Impulse: RED (Daily/4H), BLUE (1H = transitioning)</li>
+<li>RSI Daily: 9.7 = EXTREME OVERSOLD</li>
+<li>Volume: Declining = selling exhaustion</li>
+<li>Entry $0.0755 VALID, RSI supports bounce</li>
+<li>SL should be $0.0730 not $0.0735 (too close to liquidity pool
+$0.0740)</li>
+<li>Counter-trend trade, confidence 6/10</li>
+</ul>
+<h2 id="key-lesson">Key Lesson</h2>
+<p>All 3 trades were counter-trend (LONG while impulse RED). Even with
+oversold RSI and volume exhaustion signals, the impulse system rule
+(“NEVER go against HTF impulse”) should have prevented these orders from
+being placed without explicit user approval and awareness of the
+counter-trend risk.</p>
+<hr />
+<h1
+id="section-16">═══════════════════════════════════════════════════════</h1>
+<h1 id="file-referencesbinance-api-examples.md">FILE:
+references/binance-api-examples.md</h1>
+<h1
+id="section-17">═══════════════════════════════════════════════════════</h1>
+<h1 id="binance-api-for-chart-analysis">Binance API for Chart
+Analysis</h1>
+<h2 id="ohlcv-data-no-auth-required">OHLCV Data (No Auth Required)</h2>
+<h3 id="endpoints">Endpoints</h3>
+<pre><code>GET https://api.binance.com/api/v3/klines</code></pre>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Param</th>
+<th>Values</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>symbol</td>
+<td>BTCUSDT, ETHUSDT, SOLUSDT…</td>
+<td>SOLUSDT</td>
+</tr>
+<tr class="even">
+<td>interval</td>
+<td>1m, 5m, 15m, 1h, 4h, 1d, 1w</td>
+<td>4h</td>
+</tr>
+<tr class="odd">
+<td>limit</td>
+<td>1-1000 (default 500)</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-format">Response Format</h3>
+<p>Each kline = array:</p>
+<pre><code>[
+  Open time,          // [0] timestamp ms
+  Open price,         // [1] string
+  High price,         // [2] string
+  Low price,          // [3] string
+  Close price,        // [4] string
+  Volume,             // [5] string
+  Close time,         // [6] timestamp ms
+  Quote asset volume, // [7] string
+  Number of trades,   // [8] int
+  Taker buy base vol, // [9] string
+  Taker buy quote vol,// [10] string
+  Ignore              // [11] string
+]</code></pre>
+<h3 id="python-snippet">Python Snippet</h3>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests, json</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_candles(symbol<span class="op">=</span><span class="st">&#39;SOLUSDT&#39;</span>, interval<span class="op">=</span><span class="st">&#39;4h&#39;</span>, limit<span class="op">=</span><span class="dv">50</span>):</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    url <span class="op">=</span> <span class="st">&#39;https://api.binance.com/api/v3/klines&#39;</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> requests.get(url, params<span class="op">=</span>{<span class="st">&#39;symbol&#39;</span>: symbol, <span class="st">&#39;interval&#39;</span>: interval, <span class="st">&#39;limit&#39;</span>: limit})</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>    candles <span class="op">=</span> []</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> r.json():</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>        candles.append({</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;time&#39;</span>: datetime.fromtimestamp(k[<span class="dv">0</span>]<span class="op">/</span><span class="dv">1000</span>),</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;open&#39;</span>: <span class="bu">float</span>(k[<span class="dv">1</span>]), <span class="st">&#39;high&#39;</span>: <span class="bu">float</span>(k[<span class="dv">2</span>]),</span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;low&#39;</span>: <span class="bu">float</span>(k[<span class="dv">3</span>]), <span class="st">&#39;close&#39;</span>: <span class="bu">float</span>(k[<span class="dv">4</span>]),</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;volume&#39;</span>: <span class="bu">float</span>(k[<span class="dv">5</span>])</span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> candles</span></code></pre></div>
+<h3 id="swing-point-detection">Swing Point Detection</h3>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_swings(candles):</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    highs, lows <span class="op">=</span> [], []</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="bu">len</span>(candles)<span class="op">-</span><span class="dv">2</span>):</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">all</span>(candles[i][<span class="st">&#39;high&#39;</span>] <span class="op">&gt;</span> candles[j][<span class="st">&#39;high&#39;</span>] <span class="cf">for</span> j <span class="kw">in</span> [i<span class="op">-</span><span class="dv">2</span>,i<span class="op">-</span><span class="dv">1</span>,i<span class="op">+</span><span class="dv">1</span>,i<span class="op">+</span><span class="dv">2</span>]):</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>            highs.append((i, candles[i][<span class="st">&#39;high&#39;</span>], candles[i][<span class="st">&#39;time&#39;</span>]))</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">all</span>(candles[i][<span class="st">&#39;low&#39;</span>] <span class="op">&lt;</span> candles[j][<span class="st">&#39;low&#39;</span>] <span class="cf">for</span> j <span class="kw">in</span> [i<span class="op">-</span><span class="dv">2</span>,i<span class="op">-</span><span class="dv">1</span>,i<span class="op">+</span><span class="dv">1</span>,i<span class="op">+</span><span class="dv">2</span>]):</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>            lows.append((i, candles[i][<span class="st">&#39;low&#39;</span>], candles[i][<span class="st">&#39;time&#39;</span>]))</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> highs, lows</span></code></pre></div>
+<h3 id="equal-highslows-detection-liquidity">Equal Highs/Lows Detection
+(Liquidity)</h3>
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_equal_levels(candles, tolerance<span class="op">=</span><span class="fl">0.005</span>):</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    equals <span class="op">=</span> []</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(candles)):</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(candles)):</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">abs</span>(candles[i][<span class="st">&#39;high&#39;</span>] <span class="op">-</span> candles[j][<span class="st">&#39;high&#39;</span>]) <span class="op">/</span> candles[i][<span class="st">&#39;high&#39;</span>] <span class="op">&lt;</span> tolerance:</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>                equals.append((<span class="st">&#39;EH&#39;</span>, candles[i][<span class="st">&#39;high&#39;</span>], candles[i][<span class="st">&#39;time&#39;</span>], candles[j][<span class="st">&#39;time&#39;</span>]))</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">abs</span>(candles[i][<span class="st">&#39;low&#39;</span>] <span class="op">-</span> candles[j][<span class="st">&#39;low&#39;</span>]) <span class="op">/</span> candles[i][<span class="st">&#39;low&#39;</span>] <span class="op">&lt;</span> tolerance:</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>                equals.append((<span class="st">&#39;EL&#39;</span>, candles[i][<span class="st">&#39;low&#39;</span>], candles[i][<span class="st">&#39;time&#39;</span>], candles[j][<span class="st">&#39;time&#39;</span>]))</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> equals</span></code></pre></div>
+<h2 id="ocr-fallback-when-vision-model-is-down">OCR Fallback (When
+Vision Model is Down)</h2>
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="ex">apt-get</span> install <span class="at">-y</span> tesseract-ocr</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pytesseract Pillow</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pytesseract</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> pytesseract.image_to_string(Image.<span class="bu">open</span>(<span class="st">&#39;chart_screenshot.jpg&#39;</span>))</span></code></pre></div>
+<h3 id="ocr-tips-for-tradingview">OCR Tips for TradingView</h3>
+<ul>
+<li>Works best on dark theme (high contrast)</li>
+<li>Extracts: price levels, timeframe, pair name, volume numbers</li>
+<li>Doesn’t work well on candle patterns — use API data instead</li>
+<li>Crop to price axis for cleaner number extraction</li>
+</ul>
+<h2 id="quick-price-check">Quick Price Check</h2>
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Current price</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> <span class="st">&#39;https://api.binance.com/api/v3/ticker/price?symbol=SOLUSDT&#39;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 24h stats</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> <span class="st">&#39;https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDT&#39;</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Multi-symbol</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-s</span> <span class="st">&#39;https://api.binance.com/api/v3/ticker/24hr&#39;</span> <span class="kw">|</span> <span class="ex">jq</span> <span class="st">&#39;[.[] | select(.symbol | endswith(&quot;USDT&quot;)) | {symbol, lastPrice, priceChangePercent}] | sort_by(-.priceChangePercent) | .[:10]&#39;</span></span></code></pre></div>
+<hr />
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+auth.json
+credentials/
+**/current-proxy-credentials.md
+
+# Runtime / state
+*.db
+*.db-shm
+*.db-wal
+sessions/
+state-snapshots/
+logs/
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+venv/
+.curator_backups/
+.curator_state/
+.archive/
+
+# OS
+.DS_Store
