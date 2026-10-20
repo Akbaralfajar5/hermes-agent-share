@@ -18,19 +18,41 @@ Cek disk dulu: `df -h` — Hermes + skills + browser ≈ 2–3 GB.
 
 ---
 
-## 1. Install dependency sistem
+## 1. Prasyarat sistem
+
+### Wajib (untuk installer resmi)
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y python3 python3-pip python3-venv git curl wget build-essential sqlite3
+sudo apt install -y git curl xz-utils ca-certificates
 ```
 
-Opsional — Node.js 22 (dibutuhkan sebagian skill, mis. x-twitter):
+Cek cepat:
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-sudo apt install -y nodejs
+git --version && curl --version | head -1
 ```
+
+Itu saja. Installer resmi otomatis menyiapkan **uv, Python 3.11, Node.js 26,
+ripgrep, dan ffmpeg** — jadi Python/Node **tidak perlu** di-install manual.
+
+### Opsional (tergantung kebutuhan)
+
+| Paket | Buat apa |
+|-------|----------|
+| `build-essential` | Hanya kalau mau Hermes Desktop (compile native modules) |
+| `sqlite3` | CLI buat cek/backup `state.db` |
+| `nodejs` | Kalau mau pakai Node sistem (22.22+/24.11+/26+); dipakai browser tool & WhatsApp bridge |
+| `libreoffice` | Convert DOCX → PDF (skill dokumen) |
+| `tesseract-ocr tesseract-ocr-ind` | OCR scan/PDF |
+| `fonts-dejavu` / font lain | Skill dokumen & desain |
+
+```bash
+sudo apt install -y sqlite3 build-essential
+# opsional lain sesuai kebutuhan:
+# sudo apt install -y libreoffice tesseract-ocr tesseract-ocr-ind
+```
+
 
 ---
 
@@ -45,6 +67,13 @@ hermes --version
 ```
 
 ### Cara B — clone dari GitHub (kalau domain install diblokir)
+
+Cara ini butuh Python 3.11–3.13 + `venv` + `pip` di sistem:
+
+```bash
+sudo apt install -y python3 python3-venv python3-pip
+python3 --version   # pastikan 3.11 atau lebih baru
+```
 
 ```bash
 git clone https://github.com/NousResearch/hermes-agent.git ~/.hermes/hermes-agent
